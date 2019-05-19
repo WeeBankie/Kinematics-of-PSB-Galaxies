@@ -1,0 +1,38 @@
+% ----------- MNRAS --------- %
+% Do not modify this file %
+\input{general/MNRAS_header.tex}
+
+%------ AUTHOR's OWN PACKAGES HERE -------%
+\input{general/packages.tex}
+
+%--------------- COMMANDS ----------------%
+\input{general/commands.tex}
+
+%-------------- TITLE PAGE ---------------%
+\input{general/title.tex}
+\input{sections/abstract.tex}
+\input{general/keywords.tex}
+
+% --------------  TOC ------------------- %
+\input{general/ToC.tex}
+
+% --------- THESIS SECTIONS ------------- %
+\input{sections/introduction.tex}
+\input{sections/PSBs.tex}
+\input{sections/methods.tex}
+\input{sections/results.tex}
+\input{sections/discussion.tex}
+\input{sections/acknowlegements.tex}
+
+%----------- REFERENCES ------------------%
+\bibliographystyle{mnras}
+\bibliography{JPbib2019} 
+
+%----------- APPENDICES ------------------%
+\appendix
+\input{appendices/extra.tex}
+\input{appendices/python.tex}
+
+% --------- MNRAS footer -----------------%
+\input{general/MNRAS_foot.tex}
+%=========================================%
