@@ -18,9 +18,7 @@
 
 % --------- THESIS SECTIONS ------------- %
 \input{sections/introduction.tex}
-% \input{sections/PSBs.tex}
-\input{sections/methods.tex}
-% \input{sections/results.tex}
+\input{sections/sample.tex}
 \input{sections/analysis.tex}
 \input{sections/discussion.tex}
 \input{sections/acknowlegements.tex}
