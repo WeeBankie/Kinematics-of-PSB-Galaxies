@@ -10,7 +10,8 @@
 
 %-------------- TITLE PAGE ---------------%
 \input{general/title.tex}
-\input{sections/abstract.tex}
+% \input{sections/abstract.tex}
+\input{sections/abstract1.tex}
 \input{general/keywords.tex}
 
 % --------------  TOC ------------------- %
