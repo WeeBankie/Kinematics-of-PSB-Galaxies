@@ -20,6 +20,7 @@
 \input{sections/introduction.tex}
 \input{sections/sample.tex}
 \input{sections/analysis.tex}
+\input{sections/RT-plots.tex}
 \input{sections/discussion.tex}
 \input{sections/acknowlegements.tex}
 
