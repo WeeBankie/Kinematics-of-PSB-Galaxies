@@ -37,3 +37,5 @@
 % --------- MNRAS footer -----------------%
 \input{general/MNRAS_foot.tex}
 %=========================================%
+
+% \end{document}  [JP inserted - debugginh the word count...]
