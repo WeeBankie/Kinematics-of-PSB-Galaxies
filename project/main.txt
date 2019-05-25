@@ -19,6 +19,9 @@
 
 % --------- THESIS SECTIONS ------------- %
 \input{sections/introduction.tex}
+
+[JP] Add another few words here to check the word counter. This has worked out OK too. Now over 700 words.
+
 \input{sections/sample.tex}
 \input{sections/analysis.tex}
 \input{sections/RT-plots.tex}
