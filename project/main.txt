@@ -41,4 +41,4 @@
 \input{general/MNRAS_foot.tex}
 %=========================================%
 
-% \end{document}  [JP inserted - debugginh the word count...]
+% \end{document}  [JP inserted - debugging the word count...]

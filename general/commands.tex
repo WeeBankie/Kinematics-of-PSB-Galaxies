@@ -9,6 +9,25 @@
 \newcommand{\kms}{\,km s$^{-1}$}	% kilometres per second.
 \newcommand{\ms}{\,m s$^{-1}$}	    % metres per second.
 
+%%% JP added the following:
+
+\newcommand{\detailtexcount}[1]{%
+  \immediate\write18{texcount -merge -sum -q #1.tex output.bbl > #1.wcdetail }%
+  \verbatiminput{#1.wcdetail}%
+}
+ 
+\newcommand{\quickwordcount}[1]{%
+  \immediate\write18{texcount -1 -sum -merge -q #1.tex output.bbl > #1-words.sum }%
+  \input{#1-words.sum} words%
+}
+
+%% === Wow! the following includes words in Tables === %
+%TC:group table 0 1
+%TC:group tabular 1 1
+
+% https://www.overleaf.com/learn/how-to/Is_there_a_way_to_run_a_word_count_that_doesn%27t_include_LaTeX_commands%3F
+
+
 % from the mnras_guide.txt
 % \verb'\arcmin' & \arcmin & arcminutes\\[2pt]
 % \verb'\arcsec' & \arcsec & arcseconds\\[2pt]
