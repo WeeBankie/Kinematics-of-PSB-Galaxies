@@ -16,7 +16,16 @@ The Radon transform, $R$, is defined as
     R(\rho,\theta)=\int_{L}{v(x,y)\, \diff l},
 \end{equation}
 
-where $v(x,y)$ is a 2D velocity field defined in Cartesian coordinates and $\int_{L}$ is the line integral at transform coordinates ($\rho,\theta$). This transform is illustrated graphically in Fig. \ref{fig:RadonTransform} where lines through an image in 2D velocity space are mapped to a series of points in Radon transform [$\theta,\rho$] space by means of line integrals at various angles about the velocity space axes, and at various distances offset from the velocity space origin. \citet{2018MNRAS.480.2217S} have developed a set of IDL (Interactive Data Language) algorithms to perform the Radon transform on an input array representing a velocity field. The IDL code procedures we use in this work is named \texttt{ds\_radon.pro}.
+where $v(x,y)$ is a 2D velocity field defined in Cartesian coordinates and $\int_{L}$ is the line integral at transform sky-plane polar coordinates ($\rho,\theta$). This transform is illustrated graphically in Fig. \ref{fig:RadonTransform} where lines through an image in 2D velocity space are mapped to a series of points in Radon transform [$\theta,\rho$] space by means of line integrals at various angles about the velocity space axes, and at various distances offset from the velocity space origin. 
+
+\citet{2018MNRAS.480.2217S} apply a modification to the Radon transform defined in Eqn. (\ref{eqn:radon}), taking the integral of the absolute values of the velocity field difference of each point $v(x_i,y_i)$ and the mean of all values along the line segment.
+
+\begin{equation}
+    \label{eqn:radon}
+    R(\rho,\theta)=\int{| v(x,y) - \langle v(x,y) \rangle | \, \diff l},
+\end{equation}
+
+\citet{2018MNRAS.480.2217S} have developed a set of IDL (Interactive Data Language) algorithms to perform the Radon transform on an input array representing a velocity field. The IDL code procedures we use in this work is named \texttt{ds\_radon.pro}.
 
 An example of the graphical output of the Radon transform code \texttt{ds\_radon.pro} as applied to a synthetic velocity field is shown in Fig. \ref{fig:Radon}.
 
