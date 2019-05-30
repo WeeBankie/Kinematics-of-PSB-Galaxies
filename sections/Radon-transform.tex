@@ -9,16 +9,16 @@ Describe the principles of the Radon transform, its origins and history e.g. \ci
 \end{figure}
 
 \citet{2018MNRAS.480.2217S} have applied the Radon transform technique to stellar and gas velocity fields obtained from the MaNGA integral field survey in order to quantify radial variations in the kinematic position angles of galaxies (PA$_k$) using the Radon transform method \citep[see e.g.][]{radon1917determination, 7910dc8d5b654c90ac4bc94c67d06f01}. 
-The Radon transform is defined as
+The Radon transform, $R$, is defined as
 
 \begin{equation}
     \label{eqn:radon}
-    R(\rho,\theta)=\int_{L}{v(x,y)\, \diff l}.
+    R(\rho,\theta)=\int_{L}{v(x,y)\, \diff l},
 \end{equation}
 
-This transform is illustrated graphically in Fig. \ref{fig:RadonTransform}. Lines through an image in 2D velocity space are mapped to a series of points in Radon transform [$\theta,\rho$] space by means of line integrals at various angles about the velocity space axes, and at various distances offset from the velocity space origin. [TODO: expand on the definition of the RT here...]. 
+where $v(x,y)$ is a 2D velocity field defined in Cartesian coordinates and $\int_{L}$ is the line integral at transform coordinates ($\rho,\theta$). This transform is illustrated graphically in Fig. \ref{fig:RadonTransform} where lines through an image in 2D velocity space are mapped to a series of points in Radon transform [$\theta,\rho$] space by means of line integrals at various angles about the velocity space axes, and at various distances offset from the velocity space origin. \citet{2018MNRAS.480.2217S} have developed a set of IDL (Interactive Data Language) algorithms to perform the Radon transform on an input array representing a velocity field. The IDL code procedures we use in this work is named \texttt{ds\_radon.pro}.
 
-An example of the graphical output of the \citet{2018MNRAS.480.2217S} Radon transform code \texttt{ds\_radon.pro} as applied to a synthetic velocity field is shown in Fig. \ref{fig:Radon}.
+An example of the graphical output of the Radon transform code \texttt{ds\_radon.pro} as applied to a synthetic velocity field is shown in Fig. \ref{fig:Radon}.
 
 \begin{figure}
     \centering
@@ -28,6 +28,8 @@ An example of the graphical output of the \citet{2018MNRAS.480.2217S} Radon tran
 \end{figure}
 
 Following \citet{2018MNRAS.480.2217S} we will demonstrate the application of the Radon transform to stellar and gas velocity field data obtained from the SDSS-IV MaNGA integral field survey for a selection of CPSB and RPSB galaxies.  
+
+[This is new method of characterising position angles and how the $\Delta$PA varies within galaxies.]
 
 
 \begin{figure}
