@@ -37,10 +37,10 @@
 %----------- APPENDICES ------------------%
 \appendix
 % \input{appendices/extra.tex}
-% \input{appendices/python.tex}
+\input{appendices/python.tex}
 
 % --------- MNRAS footer -----------------%
 \input{general/MNRAS_foot.tex}
 %=========================================%
 
-% \end{document}  [JP inserted - debugging the word count...]
+% \end{document}  [JP inserted for debugging the word count...]
