@@ -1,0 +1,34 @@
+\section{The Radon transform}
+Describe the principles of the Radon transform, its history, e.g. \citet{7910dc8d5b654c90ac4bc94c67d06f01}, and its purpose and relevance to this research. Refer to \cite{2018MNRAS.480.2217S}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth]{images/RadonPlots/Radon-transform-Stark.png}
+    \caption{The Radon transform: the figure illustrates the Radon transform and its coordinate system as described in \citet{2018MNRAS.480.2217S}. Line integrals across an image are calculated along all possible lines, parameterised by the coordinates [$\theta$, $\rho$], that cross the 2D function v(x, y). Two examples are shown in the left-hand panel, where the integrals are calculated over the solid lines, L$_1$ and L$_2$, which are perpendicular to the [$\theta, \rho$] vectors and mapped to the points $\theta_1$, $\rho_1$ and $\theta_2$, $\rho_2$ in [$\theta$, $\rho$] parameter space in the right-hand panel. In the Radon transform coordinate system, $\theta$ ranges from 0 to 180 $\deg$ while $\rho$ ranges from $-\infty$ to $\infty$  such that a position below the x-axis corresponds to $\rho < 0$.}
+    \label{fig:RadonTransform}
+\end{figure}
+
+
+\begin{equation}
+    \label{eqn:radon}
+    R(\rho,\theta)=\int_{L}{v(x,y)\, \diff l}
+\end{equation}
+
+An example of the graphical output of the Radon transform as applied to a synthetic velocity field is shown in Fig. \ref{fig:Radon}.
+
+\begin{figure}
+    \centering
+   	\includegraphics[width=\columnwidth]{images/RadonPlots/example2.png}
+    \caption{Model Radon transform plots as described in \citet{2018MNRAS.480.2217S}. The left panel shows a synthetic uniform velocity field model, the middle panel shows the the absolute Radon transform of the velocity field and the right panel shows the aperture-restricted absolute transform. We are concerned with the latter, the absolute aperture-restricted  Radon transform of stellar and gas velocity fields in this work.}
+    \label{fig:Radon}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+   	\includegraphics[width=\columnwidth]{images/RadonPlots/RT-snips/CPSB-8313-6101-RT-snip.png}
+    \caption{Radon transform plots of the stellar velocity (left panel) and gas velocity (right) fields of CPSB of MaNGA PLATEIFU 8131-6101}
+    \label{fig:RT_8131-6101}
+\end{figure}
+
+\input{sections/RT-plots.tex}

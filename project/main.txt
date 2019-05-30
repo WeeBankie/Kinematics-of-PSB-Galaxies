@@ -23,8 +23,10 @@
 [JP] Add another few words here to check the word counter. This has worked out OK too. Now over 700 words.
 
 \input{sections/sample.tex}
-\input{sections/analysis.tex}
-\input{sections/RT-plots.tex}
+\input{sections/Analysis.tex}
+\input{sections/K-S.tex}
+\input{sections/Radon-transform.tex}
+% \input{sections/SmoothedVelocityFields.tex}
 \input{sections/discussion.tex}
 \input{sections/acknowlegements.tex}
 
