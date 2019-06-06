@@ -1,7 +1,7 @@
 \section{The Radon transform}
-Describe the principles of the Radon transform, its origins and history e.g. \citet{radon1917determination} and  \citet{7910dc8d5b654c90ac4bc94c67d06f01}, and its purpose and relevance to this research. Refer to \cite{2018MNRAS.480.2217S}.
+\cite{2018MNRAS.480.2217S} describe the application of the Radon Transform to galaxy kinematic studies. The background to the method originates in \citet{radon1917determination} and more recent applications are described in \citet{7910dc8d5b654c90ac4bc94c67d06f01}.
 
-\begin{figure}
+\begin{figure}[h]
     \centering
     \includegraphics[width=\columnwidth]{images/RadonPlots/Radon-transform-Stark.png}
     \caption{The Radon transform: the figure illustrates the Radon transform and its coordinate system as described in \citet{2018MNRAS.480.2217S}. Line integrals across an image are calculated along all possible lines, parameterised by the coordinates [$\theta$, $\rho$], that cross the 2D function v(x, y). Two examples are shown in the left-hand panel, where the integrals are calculated over the solid lines, L$_1$ and L$_2$, which are perpendicular to the [$\theta, \rho$] vectors and mapped to the points $\theta_1$, $\rho_1$ and $\theta_2$, $\rho_2$ in [$\theta$, $\rho$] parameter space in the right-hand panel. In the Radon transform coordinate system, $\theta$ ranges from 0 to 180 $\deg$ while $\rho$ ranges from $-\infty$ to $\infty$  such that a position below the x-axis corresponds to $\rho < 0$.}
@@ -9,7 +9,7 @@ Describe the principles of the Radon transform, its origins and history e.g. \ci
 \end{figure}
 
 \citet{2018MNRAS.480.2217S} have applied the Radon transform technique to stellar and gas velocity fields obtained from the MaNGA integral field survey in order to quantify radial variations in the kinematic position angles of galaxies (PA$_k$) using the Radon transform method \citep[see e.g.][]{radon1917determination, 7910dc8d5b654c90ac4bc94c67d06f01}. 
-The Radon transform, $R$, is defined as
+The Radon Transform, $R$, is defined as
 
 \begin{equation}
     \label{eqn:radon}
@@ -18,12 +18,17 @@ The Radon transform, $R$, is defined as
 
 where $v(x,y)$ is a 2D velocity field defined in Cartesian coordinates and $\int_{L}$ is the line integral at transform sky-plane polar coordinates ($\rho,\theta$). This transform is illustrated graphically in Fig. \ref{fig:RadonTransform} where lines through an image in 2D velocity space are mapped to a series of points in Radon transform [$\theta,\rho$] space by means of line integrals at various angles about the velocity space axes, and at various distances offset from the velocity space origin. 
 
-\citet{2018MNRAS.480.2217S} apply a modification to the Radon transform defined in Eqn. (\ref{eqn:radon}), taking the integral of the absolute values of the velocity field difference of each point $v(x_i,y_i)$ and the mean of all values along the line segment.
+\citet{2018MNRAS.480.2217S} apply a modification to the Radon transform, to obtain the \textit{Absolute} Radon Transform, as defined in Eqn. (\ref{eqn:radon}), by taking the integral of the absolute values of the velocity field difference of each point $v(x_i,y_i)$ and the mean of all values along the line segment.
 
 \begin{equation}
-    \label{eqn:radon}
-    R(\rho,\theta)=\int{| v(x,y) - \langle v(x,y) \rangle | \, \diff l},
+    \label{eqn:radon_absolute}
+    R_A=\int{| v(x,y) - \langle v(x,y) \rangle | \, \diff l}.
 \end{equation}
+
+There is a further variants to the Absolute Radon Transform described by \citet{2018MNRAS.480.2217S} called the \textit{bounded}, or aperture restricted, Radon transform, R$_{AB}$. Briefly, R$_{AB}$ involves placing integration limits $(\pm{r_{ap}})$, known as the aperture, on the integral of Eqn. \ref{eqn:radon_absolute} in order to limit the number of spaxels across a velocity map that will be used in the integration.
+
+These are discussed extensively in their Section XX and illustrated in their Figure 2.
+
 
 \citet{2018MNRAS.480.2217S} have developed a set of IDL (Interactive Data Language) algorithms to perform the Radon transform on an input array representing a velocity field. The IDL code procedures we use in this work is named \texttt{ds\_radon.pro}.
 
