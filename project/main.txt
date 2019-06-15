@@ -18,6 +18,7 @@
 \input{general/ToC.tex}
 
 % --------- THESIS SECTIONS ------------- %
+\input{sections/topics.tex}
 \input{sections/introduction.tex}
 \input{sections/mergers-morphology.tex}
 
