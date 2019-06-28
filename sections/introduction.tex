@@ -18,22 +18,23 @@ An overview of the SDSS MaNGA project is provided by \citet{2015ApJ...798....7B}
 DRP fields of interest used in this project are listed in Table \ref{tab:DRPall-table}.
 
 \begin{table*}
-\caption[DRPALL fields]{DPRALL data fields of interest}
+\caption[MaNGA DRPALL fields]{SDSS MaNGA DPPRALL data fields of interest}
 \label{tab:DRPall-table}
-\begin{tabular}{llllll}
+\begin{tabular}{|p{3.2cm}|p{1.2cm}||p{1cm}|p{10cm}|}
 \hline
-Name & Type & Unit & Description &  &  \\
+Name & Type & Unit & Description \\
 \hline
-PLATEIFU & char{[}100{]} &  & Plate+ifudesign name for this object (e.g. 7443-12701) &  &  \\
-MANGAID & char{[}100{]} &  & MaNGA ID for this object (e.g. 1-114145) &  &  \\
-OBJRA & float64 & degrees & Right ascension of the science object in J2000 &  &  \\
-OBJDEC & float64 & degrees & Declination of the science object in J2000 &  &  \\
-NSA\_Z & float64 &  & Heliocentric redshift &  &  \\
-NSA\_ZDIST & float64 &  & Distance estimate using peculiar velocity model of Willick et al. (1997); mulitply by c/Ho for Mpc &  &  \\
-NSA\_ELPETRO\_MASS & float64 &  & Stellar mass from K-correction fit (use with caution) for elliptical Petrosian fluxes (Ωm=0.3, ΩΛ=0.7, h=1) &  &  \\
-NSA\_ELPETRO\_BA & float64 &  & Axis ratio used for elliptical apertures (for this version, same as ba90) &  &  \\
-NSA\_ELPETRO\_TH50\_R & float64 & arcsec & Elliptical Petrosian 50\% light radius in SDSS r-band &  &  \\
-NSA\_SERSIC\_N & float64 &  & Sersic index from two-dimensional, single-component Sersic fit in r-band &  & \\
+PLATEIFU & char{[}100{]} &  & Plate+ifudesign name for this object (e.g. 7443-12701)\\
+MANGAID & char{[}100{]} & & MaNGA ID for this object (e.g. 1-114145)\\
+OBJRA & float64 & degrees & Right ascension of the science object in J2000\\
+OBJDEC & float64 & degrees & Declination of the science object in J2000\\
+NSA\_Z & float64 &  & Heliocentric redshift\\
+NSA\_ZDIST & float64 &  & Distance estimate using peculiar velocity model of Willick et al. (1997); mulitply by c/Ho for Mpc\\
+NSA\_ELPETRO\_MASS & float64 &  & Stellar mass from K-correction fit (use with caution) for elliptical Petrosian fluxes (Ωm=0.3, ΩΛ=0.7, h=1)\\
+NSA\_ELPETRO\_BA & float64 &  & Axis ratio used for elliptical apertures (for this version, same as ba90)\\
+NSA\_ELPETRO\_TH50\_R & float64 & arcsec & Elliptical Petrosian 50\% light radius in SDSS r-band\\
+NSA\_SERSIC\_N & float64 &  & Se
+rsic index from two-dimensional, single-component Sersic fit in r-band\\
 \hline
 \end{tabular}
 \end{table*}
