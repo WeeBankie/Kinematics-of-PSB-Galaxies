@@ -22,7 +22,7 @@
 %\input{sections/intro-guidance.tex}
 
 \input{sections/introduction.tex}
-\input{sections/Evolution.tex}
+% \input{sections/Evolution.tex}
 \input{sections/mergers-morphology.tex}
 \input{sections/sample.tex}
 \input{sections/Analysis.tex}
