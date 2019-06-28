@@ -1,7 +1,10 @@
 \section{Introduction}
 \label{sec:introduction}
 
-\input{sections/intro-guidance.tex}
+% \input{sections/intro-guidance.tex}
+
+\subsection{Post starburst Galaxies}
+Vivienne has been involved in the preparation of a number of papers researching PSBs: \citet{2017MNRAS.472.1401A} regarding the relationship between quenching of star formation and morphological transition, while \citet{2016MNRAS.463..832W} sets out the background work.
 
 \subsection{SDSS IV MaNGA}
 An overview of the SDSS MaNGA project is provided by \citet{2015ApJ...798....7B}. A concise description of the \href{https://iopscience.iop.org/article/10.1088/0004-637X/798/1/7/meta#apj504473s3}{survey design} is included in Section 3. We use data release DR15 of the SDSS MaNGA-IV survey \citep{2019ApJS..240...23A} and the associated FITS-format galaxy data summary table output from the MaNGA data reduction pipeline (DRP) \texttt{drpall} file version 2.4.3 as described by \citet{2016AJ....152...83L}. The output of the DRP is fed to the MaNGA data analysis pipeline (DAP) which, for DR15 and the purposes of this paper provides:
@@ -14,11 +17,13 @@ An overview of the SDSS MaNGA project is provided by \citet{2015ApJ...798....7B}
 
 DRP fields of interest used in this project are listed in Table \ref{tab:DRPall-table}.
 
-\begin{table}[]
-\caption{DPRALL fdata fields of interest}
+\begin{table*}
+\caption[DRPALL fields]{DPRALL data fields of interest}
 \label{tab:DRPall-table}
 \begin{tabular}{llllll}
+\hline
 Name & Type & Unit & Description &  &  \\
+\hline
 PLATEIFU & char{[}100{]} &  & Plate+ifudesign name for this object (e.g. 7443-12701) &  &  \\
 MANGAID & char{[}100{]} &  & MaNGA ID for this object (e.g. 1-114145) &  &  \\
 OBJRA & float64 & degrees & Right ascension of the science object in J2000 &  &  \\
@@ -28,13 +33,10 @@ NSA\_ZDIST & float64 &  & Distance estimate using peculiar velocity model of Wil
 NSA\_ELPETRO\_MASS & float64 &  & Stellar mass from K-correction fit (use with caution) for elliptical Petrosian fluxes (Ωm=0.3, ΩΛ=0.7, h=1) &  &  \\
 NSA\_ELPETRO\_BA & float64 &  & Axis ratio used for elliptical apertures (for this version, same as ba90) &  &  \\
 NSA\_ELPETRO\_TH50\_R & float64 & arcsec & Elliptical Petrosian 50\% light radius in SDSS r-band &  &  \\
-NSA\_SERSIC\_N & float64 &  & Sersic index from two-dimensional, single-component Sersic fit in r-band &  & 
+NSA\_SERSIC\_N & float64 &  & Sersic index from two-dimensional, single-component Sersic fit in r-band &  & \\
+\hline
 \end{tabular}
-\end{table}
+\end{table*}
 
-
-
-\input{sections/PSBs.tex}
-
-\subsection{Structure}
+\subsection{Structure of the paper}
 The content of the paper is organised as follows: Section \ref{sec:sample} describes the conditions required for PSB sample and the corresponding control galaxies. Data analysis methods are discussed in Section \ref{sec:analysis}. Finally, a summary of the research and the conclusions drawn from this work, along with recommendations for further study are presented in Section \ref{sec:discussion}.

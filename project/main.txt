@@ -18,14 +18,19 @@
 \input{general/ToC.tex}
 
 % --------- THESIS SECTIONS ------------- %
-\input{sections/topics.tex}
-\input{sections/introduction.tex}
-\input{sections/mergers-morphology.tex}
+%\input{sections/topics.tex}
+%\input{sections/intro-guidance.tex}
 
+\input{sections/introduction.tex}
+\input{sections/Evolution.tex}
+\input{sections/mergers-morphology.tex}
 \input{sections/sample.tex}
 \input{sections/Analysis.tex}
-\input{sections/K-S.tex}
+
+% \input{sections/K-S.tex} moved to analysis
+
 \input{sections/Radon-transform.tex}
+
 % \input{sections/SmoothedVelocityFields.tex}
 \input{sections/discussion.tex}
 \input{sections/acknowlegements.tex}
@@ -37,7 +42,7 @@
 %----------- APPENDICES ------------------%
 \appendix
 % \input{appendices/extra.tex}
-\input{appendices/python.tex}
+% \input{appendices/python.tex}
 
 % --------- MNRAS footer -----------------%
 \input{general/MNRAS_foot.tex}
