@@ -25,13 +25,15 @@
 % \input{sections/Evolution.tex}
 \input{sections/mergers-morphology.tex}
 \input{sections/sample.tex}
-\input{sections/Analysis.tex}
 
-% \input{sections/K-S.tex} moved to analysis
+\input{sections/methods.tex}
+
+\input{sections/kinemetry.tex}
 
 \input{sections/Radon-transform.tex}
 
-% \input{sections/SmoothedVelocityFields.tex}
+\input{sections/results.tex}
+
 \input{sections/discussion.tex}
 \input{sections/acknowlegements.tex}
 
