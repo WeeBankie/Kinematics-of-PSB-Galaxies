@@ -18,7 +18,10 @@ $^{2}$Royal Astronomical Society, Burlington House, Piccadilly, London W1J 0BQ, 
 % Enter the current year, for the copyright statements etc.
 \pubyear{2019}
 
-% Don't change these lines
+% \newcommand{\detailtexcount}[1]{\immediate\write18{texcount -merge -sum -q #1.tex > #1.wcdetail } \verbatiminput{#1.wcdetail}}
+
+% Don't change these lines 
+% [JP commented out the following lines and moved them to main.tex]
 \begin{document}
 \label{firstpage}
 \pagerange{\pageref{firstpage}--\pageref{lastpage}}

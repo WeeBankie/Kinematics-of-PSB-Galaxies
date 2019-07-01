@@ -8,9 +8,12 @@
 %--------------- COMMANDS ----------------%
 \input{general/commands.tex}
 
+\newcommand{\detailtexcount}[1]{\immediate\write18{texcount -merge -sum -q #1.tex > #1.wcdetail } \verbatiminput{#1.wcdetail}}
+
 %-------------- TITLE PAGE ---------------%
 \input{general/title.tex}
 % \input{sections/abstract.tex}
+
 \input{sections/abstract1.tex}
 \input{general/keywords.tex}
 
@@ -18,24 +21,40 @@
 \input{general/ToC.tex}
 
 % --------- THESIS SECTIONS ------------- %
+
+% TC:group table 0 1
+% TC:group tabular 1 1
+
+%% You can use these special %TC: tags to ignore certain parts of the text.
+
+%%TC:ignore
+\section*{Word Counts}
+This section is \textit{not} included in the word count.
+\quickwordcount{main}
+\detailtexcount{main}
+%%TC:endignore
+
+A few words to test the word counter.
+\quickwordcount{main}
+
 %\input{sections/topics.tex}
 %\input{sections/intro-guidance.tex}
 
 \input{sections/introduction.tex}
+
 % \input{sections/Evolution.tex}
+
 \input{sections/mergers-morphology.tex}
 \input{sections/sample.tex}
-
 \input{sections/methods.tex}
-
 \input{sections/kinemetry.tex}
-
 \input{sections/Radon-transform.tex}
-
 \input{sections/results.tex}
-
 \input{sections/discussion.tex}
+
+% %%TC:ignore       % Text Count ignore works.
 \input{sections/acknowlegements.tex}
+% %%TC:endignore
 
 %----------- REFERENCES ------------------%
 \bibliographystyle{mnras}

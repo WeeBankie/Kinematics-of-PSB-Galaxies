@@ -14,19 +14,15 @@
 \newcommand*\diff{\mathop{}\!\mathrm{d}} % upright d's in integrals
 
 %%% TeXcount ...
-\newcommand{\detailtexcount}[1]{%
-  \immediate\write18{texcount -merge -sum -q #1.tex output.bbl > #1.wcdetail }%
-  \verbatiminput{#1.wcdetail}%
-}
- 
-\newcommand{\quickwordcount}[1]{%
-  \immediate\write18{texcount -1 -sum -merge -q #1.tex output.bbl > #1-words.sum }%
-  \input{#1-words.sum} words%
-}
+
+\newcommand{\quickwordcount}[1]{\immediate\write18{texcount -1 -sum -merge -q #1.tex > #1-words.sum }\input{#1-words.sum} words}
+
+% \newcommand{\detailtexcount}[1]{\immediate\write18{texcount -merge -sum -q #1.tex > #1.wcdetail }\verbatiminput{#1.wcdetail}}
 
 %% === Wow! the following includes words in Tables === %
-%TC:group table 0 1
-%TC:group tabular 1 1
+% TC:group table 0 1
+% TC:group tabular 1 1
+% put these statements in your main document
 
 % https://www.overleaf.com/learn/how-to/Is_there_a_way_to_run_a_word_count_that_doesn%27t_include_LaTeX_commands%3F
 
