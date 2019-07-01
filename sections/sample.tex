@@ -4,15 +4,38 @@ The MaNGA (Mapping Nearby Galaxies at Apache Point Observatory; \citet{2015ApJ..
 
 
 \subsection{Sample selection}
-As noted earlier post-starburst galaxies or PSB regions of galaxies can be identified from their spectra typically exhibiting the strong Balmer absorption lines of A-type stars. In addition, weak emmission lines of H$\alpha$ and [OII] emission lines indicate a quiescent state with little or no present star formation. The PSB sample employed in this work is that obtained from the sampling criteria adopted by Chen et al. (2019 in preparation, personal communication).
+As described in the introduction post-starburst galaxies or PSB regions of galaxies can be identified from their spectra typically exhibiting the strong Balmer absorption lines of A-type stars. In addition, weak emmission lines of H$\alpha$ and [OII] emission lines indicate a quiescent state with little or no present star formation. 
 
-\begin{enumerate}
-    \item H$\delta$ absorption line features
-    \item strong 4000 \AA\ break 
+The PSB sample employed in this work is that obtained from the sampling criteria adopted by Chen et al. (2019 in preparation, personal communication). This PSB sample is drawn from an analysis of 4633 galaxies made available as MPL-6 (SDSS MaNGA Product Launch 6). Following Chen et al. the following sample selection criteria for CPSBs and RPSBs must meet the following criteria:
+
+\begin{itemize}
+    \item strong H$\delta$ absorption line features
+    \item a strong 4000 \AA\ break 
     \item absence of H$\alpha$ emission lines
-    \item at least 6 contiguous spaxels...
-    \item 
-\end{enumerate}
+\end{itemize}
+
+The candidate selection process involved extracting  data from the MaNGA DAP output DAPTYPE MAPS-SPX-GAU-MILESHC: where SPX denotes individual spaxel binning; GAU a Gaussian fit algorithm to stellar spectra; and MILESHC is a reference to the MILES library \citep{2011A&A...532A..95F} of stellar spectrum templates, all as described in the MaNGA DR15 DAP documentation \citet{2019arXiv190100856W}. 
+2-Maps provide the following data: 
+
+\begin{itemize}
+    \item Projected stellar rotation velocity
+    \item Stellar velocity dispersion
+    \item Ionised gas rotational velocity
+    \item Ionised gas velocity dispersion
+\end{itemize}
+
+While the associated 3-D datacubes MAPS-VOR10-GAU-
+MILESHC provide spatial spectral series yielding the following spectral properties across the galaxy field-of-view:
+
+\begin{itemize}
+    \item Dn4000 spectral index as a measure of the strength of the 4000 \AA\ break
+    \item H$\delta_A$ absorption spectral index
+    \item Nebular emission line equivalent widths
+\end{itemize}
+
+The H$\delta_A$ absorption spectral index is the equivalent width of H$\delta$ 4102\AA\ line as described by \citet{1994ApJS...94..687W}.
+
+In addition to the above considerations, for a region of a galaxy to be considered as a PSB region at least 6 contiguous spaxels in the DAP analysis are required.
 
 These selection criteria yields from the MaNGA MPL-6 dataset a total of 31 CPSBs and 37 RPSBS as listed in Tables \ref{tab:my-CPSBs} and \ref{tab:my-RPSBs} respectively. 
 

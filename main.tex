@@ -70,7 +70,6 @@
 
 \newcommand*\diff{\mathop{}\!\mathrm{d}} % upright d's in integrals
 
-
 \newcommand{\red}[1]{{\textcolor{red}{#1}}}
 \newcommand{\green}[1]{{\textcolor{green}{#1}}}
 \newcommand{\blue}[1]{{\textcolor{blue}{#1}}}
@@ -89,8 +88,6 @@
   \immediate\write18{texcount -merge -sum -q #1.tex > #1.wcdetail }%
   \verbatiminput{#1.wcdetail}%
 }
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -146,7 +143,7 @@ methods: data analysis, galaxies: kinematics and dynamics, galaxies: evolution
 \begingroup
 \let\clearpage\relax
 \tableofcontents
-\listoftables
+% \listoftables
 % \listoffigures
 \endgroup
 %%TC:endignore
@@ -158,9 +155,7 @@ methods: data analysis, galaxies: kinematics and dynamics, galaxies: evolution
 %%TC:ignore
 \newpage
 \section*{Word count}
-The text (15) and TC output in this section is not included in the word count.
-% \quickwordcount{main_text}
-\detailtexcount{main_text}
+\detailtexcount{main}
 \newpage
 %%TC:endignore
 
@@ -170,6 +165,8 @@ The text (15) and TC output in this section is not included in the word count.
 
 \input{sections/introduction.tex}
 \input{sections/mergers-morphology.tex}
+\input{sections/kinematics.tex}
+\input{sections/kinemetry-assignment.tex}
 \input{sections/sample.tex}
 \input{sections/methods.tex}
 \input{sections/kinemetry.tex}
@@ -200,12 +197,7 @@ Try to keep it short.
 
 %%%%%%%%%%%%%%%%% APPENDICES %%%%%%%%%%%%%%%%%%%%%
 
-\appendix
-
-\section{Some extra material}
-
-If you want to present additional material which would interrupt the flow of the main paper,
-it can be placed in an Appendix which appears after the list of references.
+% include your \appendix here
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
