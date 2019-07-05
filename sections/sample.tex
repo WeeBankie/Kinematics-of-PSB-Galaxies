@@ -173,7 +173,19 @@ An example of the MaNGA stellar velocity and gas velocity maps for a CPSB is ill
 Control galaxies as 'normal' galaxies not exhibiting PSB features. Also check this with Chen et al. (2019) for consistency.
 
 \subsection{Quality screening}
-We will need a short write-up from Chris on the quality flag screening of the MPL-8 data release. [TODO: we now have that, summarise here.]
+Global kinematic velocity position angles (PA) for the sample were determined using the \texttt{fit\_kinemetry\_pa} routine as described in appendix C of \cite{2006MNRAS.366..787K}. The routine returns the angle of the line bisecting the greatest change in velocity between the receding and approaching sides. \cite{2019MNRAS.483..172D} performed a \texttt{kinemetry} analysis of over 8,000 galaxies from the internal MPL-8 release of the MaNGA survey. In order to obtain a clean sample of well defined global PAs they visually classified the stellar and H$\alpha$ gas velocity fields of all galaxies in their sample into 3 categories (Chris Duckworth, 2019, personal communication), and set flags in their dataset as follows:
+
+\begin{itemize}
+    \item [1] Dominant coherent rotation and well defined PA. 
+    \item [2] Dominant coherent rotation but with complex motions or highly inclined velocity fields 
+    \item [3] Do not use
+\end{itemize}
+
+During this analysis galaxies with kinematically decoupled cores (KDCs) and warped velocity fields were also identified.
+
+
+
+The resulting MPL-8 dataset  \cite{2019MNRAS.483..172D} dataset of galaxies with reliable global PAs (flagged as [1] or [2]) was matched with the PSB galaxies in the sample of Chen et al. (2019, in prep.) to obtain a subset of PSBs with good \texttt{kinemetry} analysis flags. Furthermore a subset of those PSBs with $\Delta$PAs > 30\textdegree\ was extracted. The results are shown in Tables \ref{tab:my-CPSBs} and \ref{tab:my-RPSBs}. 
 
 \subsection{PA plots: misaligned CPSBs}
 [Include a few examples of the PDF output from kinemetry: Chris' plots.]
