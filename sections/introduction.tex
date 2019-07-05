@@ -7,7 +7,7 @@
 \label{sec:evolution}
 
 The prevalent theory of galaxy evolution is often explained  by  by referring to galaxy colour-colour and colour-magnitude diagrams (CMD) \citep[see e.g.][]{2001AJ....122.1861S, 2003ApJ...585L...5H, 2003ApJS..149..289B,baldry2004quantifying,2006MNRAS.373..469B}. A representative CMD constructed from SDSS observations of 20,000 nearby galaxies (z < 0.04)  is presented in  Figure~\ref{fig:CMD1}. The CMD exhibits a clear colour-magnitude bimodality.  Gas-rich, star-forming, often late-type galaxies (Sb, Sc, Irr) populate the so-called 'blue cloud' region of the CMD. As gas is consumed through star formation blue cloud galaxies are understood to transition to the redder mainly early-type (E, S0, Sa  quiescent galaxies along the upper left in the 'red sequence' region of the CMD. There is a sparsely populated region separating the blue cloud and red sequence populations often referred to as the 'green valley' region of the CMD  \citep{2004ApJ...608..752B}. In this paper we explore the evolutionary pathway of galaxies in transition between the blue cloud and the red sequence, through the green valley.
-As a visualisation of this scenario it is of interest to note that \citet{Mutch_2011} assert that large spiral Sa/SBa type galaxies such as the Milky Way and the Andromeda galaxy M31 are in evolutionary transition from star-forming to passive galaxies due to the past consumption of much of their cold gas and now lie within the green valley.
+As a visualisation of this scenario it is of interest to note that \citet{Mutch_2011} assert that large spiral Sa/SBa type galaxies like the Milky Way and the Andromeda galaxy M31 are in evolutionary transition from star-forming to passive galaxies due to the past consumption of much of their cold gas and now lie within the green valley.
 
 \begin{figure}
 	\includegraphics[width=\columnwidth]{images/CMDs/galaxyCMD.PNG}
@@ -17,21 +17,29 @@ As a visualisation of this scenario it is of interest to note that \citet{Mutch_
 
 \subsection{Post starburst Galaxies}
 
-Post-starburst (PSB) galaxies are those galaxies where their spectra indicate that star formation has ceased within the past gigayear or so. The is no spectral evidence of young O and B-type stars which will have gone supernova in that time. PSB spectra are dominated by the strong Balmer absorption lines H$\beta$, H$\gamma$, H$\delta$ typical of A-type stars. Emission lines characteristic of ongoing star formation such as [OII] 3727\AA\ are weak or absent \citep{2001ApJ...547L..17B,2003PASJ...55..771G,2004MNRAS.355..713B,2005MNRAS.357..937G,2018MNRAS.477.1708P}. The morphology of PSBs is often that of early-type ellipticals. PSBs are therefore also referred to as E+A or k+A galaxies. These observations indicate a brief burst of star formation in the past 1 to 2 Gyr which has subsequently ceased, or been 'quenched'. This is indicative that PSB galaxies are in transition on an evolutionary pathway from active star-forming galaxies to passive spheroids \citep{2004MNRAS.355..713B,2012MNRAS.420..672S,2013MNRAS.429.2212M}. \citet{2004MNRAS.355..713B} using a sample of a sample of low-redshift (z~0.1) E+A galaxies from the 2dF Galaxy Redshift Survey (2dFGRS)find evidence of major mergers, such as tidal tails, and conclude that major mergers are an important formation mechanism for E+A PSB galaxies.
+Post-starburst (PSB) galaxies are a class of galaxies where the spectra indicate that star formation has ceased within the past gigayear or so. The is no spectral evidence of young O and B-type stars which will have gone supernova in the dynamical time since the starburst event. PSB spectra are dominated by the strong Balmer absorption lines H$\beta$, H$\gamma$, H$\delta$ typical of main sequence A-type stars, particularly if a strong  H$\delta$ absorption line width is evident \citep{1997A&A...325.1025P}, while emission lines characteristic of ongoing star formation, for example [OII] 3727\AA\, are weak or absent \citep{2001ApJ...547L..17B,2003PASJ...55..771G,2004MNRAS.355..713B,2005MNRAS.357..937G,2018MNRAS.477.1708P}. The morphology of PSBs is often that of early-type ellipticals and therefore PSBs are often referred to as E+A or k+A galaxies. These spectral observations are characteristic of a brief burst of star formation in the past 0.5 to 1.5 Gyr which has subsequently ceased, or been 'quenched' \citep{1983ApJ...270....7D,1997A&A...325.1025P}. These spectral features are indicative that PSB galaxies are in transition on an evolutionary track from active star-forming galaxies to passive spheroids \citep{2004MNRAS.355..713B,2012MNRAS.420..672S,2013MNRAS.429.2212M}. \citet{2004MNRAS.355..713B} employ a sample of a sample of low-redshift (z~0.1) E+A galaxies from the 2dF Galaxy Redshift Survey (2dFGRS)and find evidence of major mergers, such as tidal tails, and conclude that major mergers are an important formation mechanism for E+A PSB galaxies.
 
-[TODO: reformulate the following paragraph] Vivienne has been involved in the preparation of a number of papers researching PSBs: \citet{2017MNRAS.472.1401A} regarding the relationship between quenching of star formation and morphological transition, while \citet{2016MNRAS.463..832W} sets out the background work.
+The key question we are investigating here is to whether major mergers are the primary cause of quenching of star formation and provide a link between quenching of star formation and morphological transition.
 
+[TODO: reformulate the following paragraph] See Vivienne's  papers researching PSBs: \citet{2017MNRAS.472.1401A} regarding the relationship of quenching and transition. \citet{2016MNRAS.463..832W} sets out the background work.
 
-\subsection{SDSS IV MaNGA}
-An overview of the SDSS MaNGA project is provided by \citet{2015ApJ...798....7B}. A concise description of the \href{https://iopscience.iop.org/article/10.1088/0004-637X/798/1/7/meta#apj504473s3}{survey design} is included in Section 3. We use data release DR15 of the SDSS MaNGA-IV survey \citep{2019ApJS..240...23A} and the associated FITS-format galaxy data summary table output from the MaNGA data reduction pipeline (DRP) \texttt{drpall} file version 2.4.3 as described by \citet{2016AJ....152...83L}. The output of the DRP is fed to the MaNGA data analysis pipeline (DAP) which, for DR15 and the purposes of this paper provides:
+\subsection{SDSS-IV MaNGA survey}
+The data used in this work includes galaxy stellar velocity and gas velocity kinematic maps, and spectral index maps and individual spectra drawn from the Sloan Digital Sky Survey (SDSS) phase IV project MaNGA (Mapping Nearby Galaxies
+at Apache Point Observatory). An overview of the SDSS-IV MaNGA project is provided by \citet{2015ApJ...798....7B}, where key instrumentation features and observational strategy employed by MaNGA are dithered observations with 17 fiber-bundle integral
+field units (IFU) that vary in diameter from 12 (19 fibres) to 32 (127 fibres). Two dual-channel spectrographs provide
+simultaneous wavelength coverage over the range 3600 to 10300 \AA\ at a spectral resolution of R $\sim$2000.
+
+We use data release DR15 of the SDSS MaNGA-IV survey \citep{2019ApJS..240...23A} and the associated FITS-format galaxy data summary table output from the MaNGA data reduction pipeline (DRP) \texttt{drpall} file version 2.4.3 as described by \citet{2016AJ....152...83L}. The output of the DRP is fed to the MaNGA data analysis pipeline (DAP) which, for DR15 and the purposes of this paper provides:
 \begin{itemize}
     \item Spatially stacked spectra
-    \item Stellar kinematics (V and $\sigma$)
+    \item Stellar kinematics (velocity, V, and velocity dispersion, $\sigma$)
     \item Nebular emission-line properties: fluxes, equivalent widths, and kinematics (V and $\sigma$)
-    \item Spectral Indices: absorption-line (e.g., H$\delta)$ and bandhead (e.g., D4000) measurements
+    \item Spectral Indices: absorption-line (e.g.  H$\delta_A)$ and bandhead (e.g., D$_n$4000) measurements
 \end{itemize}
 
-The DRP data fields of interest used in this project are listed in Table \ref{tab:DRPall-table}.
+The above dataset are available in the form of datacubes referenced by MaNGA unique object ID or in the form of PLATE-IFU either of which can be accessed downloaded from the SDSS science archive server or by using the Marvin web interface tool \citep{2018arXiv181203833C}. The DRP data fields of interest used in this project are listed in Table \ref{tab:DRPall-table}.
+
+
 
 \begin{table*}
 \caption[MaNGA DRPALL fields]{SDSS MaNGA DPPRALL data fields of interest}
@@ -56,4 +64,4 @@ rsic index from two-dimensional, single-component Sersic fit in r-band\\
 \end{table*}
 
 \subsection{Structure of the paper}
-The content of the paper is organised as follows: A concise review of the literature on galaxy mergers and morphology transitions relevant to the paper is introduced in Section \ref{sec:mergers}. The selection criteria for the PSB sample and control galaxies are laid out in Section \ref{sec:sample}. Data analysis methods and results are presented in Section \ref{sec:analysis}. The method of the velocity field analysis method employing the Radon transform method is a significant analysis tool in its own right. This is discussed in some detail in Section \ref{sec:Radon}. Finally, a summary of the research and the conclusions drawn from this work, along with recommendations for further study are presented in Section \ref{sec:discussion}.
+The content of the paper is organised as follows: A concise review of the literature on galaxy mergers and morphology transitions relevant to the paper is introduced in Section \ref{sec:mergers}. Section \ref{sec:kinematics} describes the application of kinematics to the study of galaxy morphology and evolution. The selection criteria for our PSB sample and control galaxies are laid out in Section \ref{sec:sample}. Data analysis methods and results are presented in Section \ref{sec:analysis}. The method of the velocity field analysis method employing the Radon transform method is a significant analysis tool in its own right. This is discussed in some detail in Section \ref{sec:Radon}. Finally, a summary of the research and the conclusions drawn from this work, along with recommendations for further study are presented in Section \ref{sec:discussion}.
