@@ -1,5 +1,6 @@
-\section{The Radon transform}
+\section{The Radon transform method}
 \label{sec:Radon}
+[TODO: rewrite this paragraph.] The global position angles obtained from the \texttt{kinemetry} method are well defined for coherently rotating stellar or gas velocity fields. In cases where galaxies exhibit radial variation in the velocity fields for example due to warps, where the velocity field in the outer regions is tilted compared with the core, in kinematically decoupled cores (KDCs), in bars or oval distortions, or in local regions of irregular velocity distribution the global PA does not provide a clear-cut description of the velocity field, a finer level of detail of the radial variation of the velocity field be accomplished using the Radon transform method. 
 
 The Radon transform (RT) is a mathematical transformation of an image devised to reveal internal properties of an object such as structure. The method was originally devised by Johann Radon in 1917 \citep{radon1917determination}. Since then the technique has been applied to many fields, including various branches of astronomy including microwave, radio and x-ray applications. \citet{deans2007radon} describes many of these applications, and also includes an English translation of Radon's original German text. In a more recent treatment  \citet{7910dc8d5b654c90ac4bc94c67d06f01} describes the application of the RT in the field of digital signal processing and presents algorithms for its implementation. For our purposes \cite{2018MNRAS.480.2217S} describe the application of the Radon Transform to galaxy kinematic studies.  
 
@@ -27,7 +28,7 @@ where $v(x,y)$ is a 2D velocity field defined in Cartesian coordinates and $\int
     R_A=\int{| v(x,y) - \langle v(x,y) \rangle | \, \diff l}.
 \end{equation}
 
-There is a further variants to the Absolute Radon Transform described by \citet{2018MNRAS.480.2217S} called the \textit{bounded}, or aperture restricted, Radon transform, R$_{AB}$. Briefly, R$_{AB}$ involves placing integration limits $(\pm{r_{ap}})$, known as the aperture, on the integral of Eqn. \ref{eqn:radon_absolute} in order to limit the number of spaxels across a velocity map that will be used in the integration.
+There is a further variants to the Absolute Radon Transform described by \citet{2018MNRAS.480.2217S} called the \textit{bounded}, or aperture restricted, Radon transform, R\textsubscript{AB}. Briefly, R\textsubscript{AB} involves placing integration limits $(\pm{r_{ap}})$, known as the aperture, on the integral of Equation \ref{eqn:radon_absolute} in order to limit the number of spaxels across a velocity map that will be used in the integration.
 
 These are discussed extensively in their Section XX and illustrated in their Figure 2.
 
