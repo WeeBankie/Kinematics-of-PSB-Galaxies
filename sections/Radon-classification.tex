@@ -23,7 +23,7 @@ Mathematical functions describing these Radon profile classifications have been 
 \begin{enumerate}
     \item Firstly we obtain the MAPS datacube FITS files for the selected PSB galaxies listed in Tables \ref{tab:my-CPSBs} and \ref{tab:my-RPSBs}, and a similar number of 'normal' galaxies drawn from their respective control samples, as described in Section \ref{sec:controls}, downloaded via the MaNGA Marvin web interface.
     \item Next, we process each of datacubes through the Radon transform wrapper code to obtain PostScript output files showing the galaxy SDSS $gri$ image cutout, the MaNGA stellar velocity map, the absolute bounded Radon transform R\textsubscript{AB} plot and the Radon profile plot of $\hat{\sigma}$ versus $\rho$. An example of this output is shown in Figure \ref{fig:RT-CPSB-9493-12705-SNIP}. 
-    \item  Finally we examine the output plot for each galaxy and visually assess the relative qualitative strength of each of the 5 classification features by assigning a numeric weighting as given in Table \ref{tab:features}. This method adds a semi-quantitative aspect to the visual assessment process.
+    \item  Finally we examine the output plot for each galaxy and visually assess the relative qualitative strength of each of the 5 classification features by assigning a numeric weighting as given in Table \ref{tab:features}. This method adds a semi-quantitative approach to the visual assessment process.
 \end{enumerate}
 
 \begin{table}
@@ -41,16 +41,17 @@ Mathematical functions describing these Radon profile classifications have been 
     \label{tab:features}
 \end{table}
 
-In order to avoid a sample induced bias the galaxies are visually assessed in alphanumerical order of their PLATEIFU filename tag. No other information is used in visual assessment process. This is intended to avoid the pitfall of assessing one group, CPSBs, RPSBs, or their respective control sample groups, where common features may be apparent in a particular group. 
+In order to avoid a sample induced bias the galaxies are visually assessed in alphanumerical order of their PLATEIFU file name tag. No other information is used in visual assessment process. This is intended to avoid the pitfall of assessing one group, CPSBs, RPSBs, or their respective control sample groups, where common features may be apparent in a particular group. 
 
 After inspecting the Radon transform and associated Radon trace plots for a particular galaxy an assessment of the strength of the Radon profile type features evident in the plots. A feature strength values from Table \ref{tab:features} is assigned to each of the 5 predefined Type classes for the galaxy. Based on the relative strength values allocated a predominant feature Type (C, IB, OB, IB+OB or A) is assigned to that particular galaxy. To determine the relative predominance of Type-IB+OB features we simply sum the strength values assigned to Types IB and OB together. 
 In many cases there is some uncertainty in the absolute Type assessment, i.e. only one of the 5 defines classes, a secondary assessment is made,  generally this is the primary Type plus a less evident Type, or sub-dominant Type feature. The secondary assessment may be of use later in the analysis process. The complete Radon profile classification table, including the primary and secondary Type assessments, is provided in Appendix \ref{sec:visual-classification-tables}.
 
 As an example of the classification process we can use the example of the gas velocity field of the (non-PSB) spiral galaxy 8313-12705 as shown in Figure \ref{gas-example}. Comparing the Radon trace profile with the model traces in Figure \ref{fig:class-models} the visual classification process yields: C=0, IB=1, OB=2, IB+OB=1+2=3, and A=0; consequently this galaxy is categorised as Type-OB+IB. 
 
-During classification some difficulties were encountered mainly with Radon trace profiles that did not fit easily into on of the 5 classification Types: for example Inner Bends evident on a largely asymmetric trace, sharp features resembling inner bends apparent at well off-centre radii. An example of this is shown in Figure [TODO]. We should attempt to take such sub-dominant, or off-centre, features into account in a secondary analysis. However, this is outside the scope of this present work.
+During classification some difficulties were encountered mainly with Radon trace profiles that did not fit easily into on of the 5 classification Types. An example of this is clearly defined IB of 8555-3701 is imposed on an asymmetric trace as shown in Figure [TODO]. In many other cases bends, or velocity field disturbances, are evident as notches at well off-centre radii on otherwise constant or largely asymmetric traces. To obtain a comprehensive census at this level of detail these sub-dominant and off-centre, features should be into account in a secondary analysis, which is outside the scope of this present work.
 
-The results of visual classification procedure is included [TODO] in Appendix .  
+
+The details of the visual classification for each galaxy is included [TODO] in Appendix \ref{sec:visual-classification-tables}.  
 
 
 
