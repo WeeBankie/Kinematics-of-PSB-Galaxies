@@ -27,6 +27,8 @@ Mathematical functions describing these Radon profile classifications have been 
 \end{enumerate}
 
 \begin{table}
+    \caption{Relative weighting of Radon profile feature strengths used in the  visual classification of Radon profile feature types: Constant, Inner Bend, Outer Bend, Inner Bend + Outer Bend or Asymmetric. The weighting is applied to quantify the visual appearance of the trace profile plots.}
+    \label{tab:features}
     \centering
     \begin{tabular}{cl}
     \hline
@@ -37,8 +39,7 @@ Mathematical functions describing these Radon profile classifications have been 
     0 & The feature is absent \\
     \hline
     \end{tabular}
-    \caption{Relative weighting of Radon profile feature strengths used in the  visual classification of Radon profile feature types: Constant, Inner Bend, Outer Bend, Inner Bend + Outer Bend or Asymmetric. The weighting is applied to quantify the visual appearance of the trace profile plots.}
-    \label{tab:features}
+
 \end{table}
 
 In order to avoid a sample induced bias the galaxies are visually assessed in alphanumerical order of their PLATEIFU file name tag. No other information is used in visual assessment process. This is intended to avoid the pitfall of assessing one group, CPSBs, RPSBs, or their respective control sample groups, where common features may be apparent in a particular group. 
@@ -50,9 +51,28 @@ As an example of the classification process we can use the example of the gas ve
 
 During classification some difficulties were encountered mainly with Radon trace profiles that did not fit easily into on of the 5 classification Types. An example of this is clearly defined IB of 8555-3701 is imposed on an asymmetric trace as shown in Figure [TODO]. In many other cases bends, or velocity field disturbances, are evident as notches at well off-centre radii on otherwise constant or largely asymmetric traces. To obtain a comprehensive census at this level of detail these sub-dominant and off-centre, features should be into account in a secondary analysis, which is outside the scope of this present work.
 
+A summary of the final visual classification process is shown in Table \ref{tab:Radon-class-summary}. The visual classification details for each galaxy is included [TODO] in Appendix ... 
 
-The details of the visual classification for each galaxy is included [TODO] in Appendix \ref{sec:visual-classification-tables}.  
 
+\begin{table}
+    \centering
+    \caption{Summary of the classification of Radon profile types as categorised visually in the CPSB and RPSB groups and their control samples. A few galaxies could not be visually classified (NC) through the analysis due to masked areas in the MaNGA maps.}
+    \label{tab:Radon-class-summary}
+    \begin{tabular}{lc}
+    \hline
+    Radon profile type & Number in classification \\
+    \hline
+    Type-A: Asymmetric & 25 \\
+    Type-C: Constant & 38 \\
+    Type-IB: Inner Bend & 22 \\
+    Type-OB: Outer Bend & 17 \\
+    Type-OB+IB: Outer and Inner Bends & 17 \\
+    NC: Not classified & 8 \\
+    \hline
+    \end{tabular}
+\end{table}{c|c}
+
+Following the Radon profile classification we investigate the distribution of the Radon profile types with the PSB groups (CPSB and RPSB) and their control samples. 
 
 
 
