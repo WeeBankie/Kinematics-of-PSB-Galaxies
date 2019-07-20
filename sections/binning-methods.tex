@@ -1,0 +1,24 @@
+\subsection{Velocity map binning methods}
+The MaNGA DAP utilises various spaxel binning models to process the IFU fibre bundle data into the output maps. The available binning schemes used to produce gas and stellar velocity maps, together with a brief description of each are listed below.
+
+\begin{itemize}
+    \item SPX - single spaxel measurements i.e. no binning.
+    \item VOR10 - Voronoi binning, an adaptive spatial binning method where low signal-to-noise (S/N) ratio spaxels are grouped to achieve an overall S/N of 10  \citep{2003MNRAS.342..345C, 2019arXiv190100856W}.
+    \item HYB10 - Hybrid binning: Voronoi S/N 10 binning for stellar velocity maps, but unbinned for emission line properties which are used to generate gas velocity maps.
+\end{itemize}  
+
+In this study we have utilised MaNGA datacubes released in DR15 MPL-7 which have been processed in the DAP using the hybrid HYB10 binning model, i.e. using VOR10 binning for the stellar velocity maps. Currently the MaNGA project team have an internal dataset available, MPL-8. Datacubes in MPL-8 include VOR10 and SPX binning schema. We were interested to make a comparison of the Radon trace profiles generated from the datacubes using the Voronoi and SPX binning schemas. A limited sample of MPL-8 cubes were made available for this comparison exercise. We selected 2 galaxies from our samples with stellar velocity maps having poor spatial definition, and another 2 with good resolution in order to compare the Radon transform profiles using the Voronoi and SPX binning methods. The selected datacubes were: examples of good resolution/definition in stellar velocity maps:
+
+\begin{itemize}
+    \item 7977-12704
+    \item 8322-1901
+\end{itemize}
+
+and examples of poor resolution/definition in stellar velocity maps (i.e. having a blotchy appearance), some with masked spaxels:
+
+\begin{itemize}
+    \item 9088-12703
+    \item 8993-6104
+\end{itemize}
+
+The stellar velocity maps and their Radon trace profiles for these examples are shown in Figure [TODO]: Voronoi binning and SPX binning. A comparison shows...
