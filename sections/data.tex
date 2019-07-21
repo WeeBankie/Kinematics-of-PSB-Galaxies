@@ -17,7 +17,7 @@ We use data release DR15 of the SDSS MaNGA-IV survey \citep{2019ApJS..240...23A}
 
 The above datasets are available in the form of 3-D (2 spatial dimensions and 1 spectral wavelength dimension) datacubes referenced by MaNGA unique object ID or in the form of PLATE-IFU either of which can be accessed downloaded from the SDSS science archive server or by using the Marvin web interface tool \citep{2018arXiv181203833C}. The DRP data fields of interest used in this project are listed in Table \ref{tab:DRPall-table}.
 
-\begin{table*}
+\begin{table*}[h]
 \caption[MaNGA DRPALL fields]{SDSS MaNGA DRPALL data fields of interest}
 \label{tab:DRPall-table}
 \begin{tabular}{|p{3.2cm}|p{1.2cm}||p{1cm}|p{10cm}|}
@@ -78,7 +78,7 @@ In addition to the above, for a region to be classed as PSB at least 6 contiguou
 
 Using MPL-6 data Chen et al. (2019) identified 360 galaxies possessing PSB spaxel regions meeting the above selection criteria. They then categorised the galaxies into 3 PSB types: those with central PSB regions (CPSBs); those with off-centre ring-like, or partial ring-like PSB features (RPSBs) and those with irregular regions of  PSB spaxels in the outskirts (irregulars or IPSBs). In fact, \citet{2018MNRAS.480.2544R} find that PSB regions are more common outside the central region. The selection process described above yielded a total of 31 CPSBs and 37 RPSBS as listed in Tables \ref{tab:my-CPSBs} and \ref{tab:my-RPSBs} respectively.
 
-\begin{table}
+\begin{table}[h]
 \caption{Central-type PSBs identified in MaNGA MPL-6}
 \label{tab:my-CPSBs}
 \begin{tabular}{lccccc}
@@ -121,7 +121,7 @@ PlateIFU & RA & dec & z & log & S\'ersic\\
 \end{tabular}
 \end{table}
 
-\begin{table}
+\begin{table}[h]
 \caption{Ring-type PSBs identified in MaNGA MPL-6}
 \label{tab:my-RPSBs}
 \begin{tabular}{lccccc}
@@ -172,7 +172,7 @@ PlateIFU & RA & dec & z & log & S\'ersic \\
 
 The distribution of the CPSB and RPSB samples is shown in a colour-mass plot in Figure \ref{fig:Colour-Mass-PSBs}. The left panel shows the entire MaNGA DR15 sample distribution plotted as the NSA (NASA Sloan atlas) colour index $NUV - i$ versus galaxy stellar mass taken from NSA elpetro\_logmass data. The scatter plot distribution of galaxies and the underlying scatter plot shown the same blue cloud and red sequence distribution as discussed in section \ref{sec:evolution}. [TODO: extend this to describe the RH panel.]
 
-\begin{figure*}
+\begin{figure*}[h]
     \centering
     \includegraphics[width=\columnwidth]{images/CMDs/Colour-Mass-DR15-All.png}
     \includegraphics[width=\columnwidth]{images/CMDs/Colour-Mass-DR15-PSBs.png}

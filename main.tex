@@ -21,7 +21,8 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Basic setup. Most papers should leave these options alone.
-\documentclass[fleqn,usenatbib]{mnras}
+\documentclass[11pt,fleqn,usenatbib]{mnras} % mnras
+% \documentclass[11pt,usenatbib]{article} % mnras
 
 % MNRAS is set in Times font. If you don't have this installed (most LaTeX
 % installations will be fine) or prefer the old Computer Modern fonts, comment
@@ -50,6 +51,19 @@
 
 \usepackage{longtable}  % for the Appendix
 
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ left=22mm,
+ right=20mm,
+ top=30mm,
+ bottom =22mm
+ }
+%  total={170mm,257mm}
+ 
+% \usepackage{multicol} % not used
+
+\usepackage[section]{placeins}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -98,34 +112,54 @@
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
 % \title[Short title, max. 45 characters]{MNRAS \LaTeXe\ Kinematics of PSB galaxies}
-\title[Kinematics of PSB galaxies]{SDSS-IV MaNGA: Kinematics of PSB galaxies: detecting merger signatures} %[short title]{long title}
+\title[Kinematics of PSB galaxies]{SDSS-IV MaNGA: Kinematics of PSB galaxies: detecting merger signatures} 
+%[short title]{long title}
 
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
-\author[J. Proctor]{John Proctor$^{1,2}$\thanks{E-mail: jp210@st-andrews.ac.uk}
-\\
+%%% \author[J. Proctor]{John Proctor$^{1,2}$\thanks{E-mail: jp210@st-andrews.ac.uk}
+%%% \\
 % List of institutions
-$^{1}$School of Physics and Astronomy, University of St Andrews, North Haugh, St Andrews KY16 9SS, UK\\
-$^{2}$Royal Astronomical Society, Burlington House, Piccadilly, London W1J 0BQ, UK\\}
+%%% $^{1}$School of Physics and Astronomy, University of St Andrews, North Haugh, St Andrews KY16 9SS, UK\\
+%%% $^{2}$Royal Astronomical Society, Burlington House, Piccadilly, London W1J 0BQ, UK\\}
 
 % These dates will be filled out by the publisher
-\date{Accepted XXX. Received YYY; in original form ZZZ}
+%%% \date{Accepted XXX. Received YYY; in original form ZZZ}
 
 % Enter the current year, for the copyright statements etc.
-\pubyear{2019}
+%%% \pubyear{2019}
 
 % Don't change these lines
 \begin{document}
+
+\input{sections/cover-page.tex} %%% This works!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The MNRAS class isn't designed to include a table of contents, but for this document one is useful.
+% I therefore have to do some kludging to make it work without masses of blank space.
+
+
+%%TC:ignore
+\begingroup
+\let\clearpage\relax
+\tableofcontents
+\listoftables
+\listoffigures
+\endgroup
+%%TC:endignore
+
+% \newpage % [JP] remove the comment to remove the column break. 
+
+
 \label{firstpage}
 \pagerange{\pageref{firstpage}--\pageref{lastpage}}
 \maketitle
 
+\newpage
+
 % Abstract of the paper
-
 \begin{abstract}
-
 \input{sections/abstract1.tex}
-
 \end{abstract}
 
 % Select between one and six entries from the list of approved keywords.
@@ -134,31 +168,18 @@ $^{2}$Royal Astronomical Society, Burlington House, Piccadilly, London W1J 0BQ, 
 methods: data analysis, galaxies: kinematics and dynamics, galaxies: evolution
 \end{keywords}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% The MNRAS class isn't designed to include a table of contents, but for this document one is useful.
-% I therefore have to do some kludging to make it work without masses of blank space.
 
-%%TC:ignore
-\begingroup
-\let\clearpage\relax
-\tableofcontents
-% \listoftables
-% \listoffigures
-\endgroup
-%%TC:endignore
-
-% \newpage % [JP] remove the comment to remove the column break. 
 
 %%%%%%%%%%%%%%%%% BODY OF PAPER %%%%%%%%%%%%%%%%%%
 
-\input{sections/word-counter.tex}
+% \input{sections/word-counter.tex}
 
 %%TC:ignore
     %   \input{sections/intro-guidance.tex}
 %%TC:endignore
 
 \input{sections/introduction.tex}
-\input{sections/mergers-morphology.tex}
+% \input{sections/mergers-morphology.tex} moved to the introduction.
 % \input{sections/m&m-guidance.tex}
 
 \input{sections/data.tex}
