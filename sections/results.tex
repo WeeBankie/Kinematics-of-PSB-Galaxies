@@ -9,28 +9,28 @@ The surface brightness profile of a galaxy is generally a function of radius fro
 
 The distribution of S\'ersic index values as shown in Figure \ref{fig:Sersic-plot} covers a wide range of values indicating a wide range of morphologies. CPSBs  generally have higher S\'ersic index values than RPBs. This suggests that CPBs tend to have concentrated nuclei and a spheroidal morphology contrary to the more disc-like RPSBs with lower SI-n values.
 
-\begin{figure}[h]
+\begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{images/JupyterPlots/Dist-Sersic-Index-All.png}
     \caption{Distribution of S\'ersic index (SI) values. The relative number density distribution of the S\'ersic index value for 26 CPSBs (red histogram) and 36 RPSBs (blue) are plotted. Five PSBs with unreliable SI values (SI = 6.000) in the NSA data  have been excluded.}
     \label{fig:Sersic-plot}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{images/JupyterPlots/Dist-Stellar-Mass-All.png}
     \caption{Distribution of Stellar mass of our sample of CPSBs (red) and RPSBs (blue). On the logarithmic scale of $\log_{10}$\Msun\ a fairly uniform distribution of stellar mass is apparent for both populations, CPSBs and RPSBs.}
     \label{fig:stellar-mass-plot}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{images/JupyterPlots/Dist-z-All.png}
     \caption[PSB distribution in redshift]{Distribution in redshift: the redshift z as obtained from the NSA.Z data value for the CPSB sample (shaded in red) is compared to the RPSB sample (blue).}
     \label{fig:redshift-plot}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{images/JupyterPlots/Dist-Delta-PA-All-GoodFlags.png}
     \caption[Distribution of PSB velocity field position angles]{Distribution of PSB galaxy velocity map position separation angles ($\Delta$PAs) for those PSBs with stellar velocity and gas velocity characteristics flagged as 'good' as denoted in the legend (see text for details). CPSB $\Delta$PA density weights are plotted in red, RPSB $\Delta$PA weights in blue.}
@@ -39,21 +39,21 @@ The distribution of S\'ersic index values as shown in Figure \ref{fig:Sersic-plo
 
 The velocity field position angle variance of the CPSB and PSB control galaxies is shown in Figure \ref{fig:controlDeltaPAs}. Both sets of control galaxies have low values of velocity field $\Delta$PAs, i.e. the stellar velocity and gas velocity fields are generally aligned.
 
-\begin{figure}[h]
+\begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{images/JupyterPlots/DIST-Control-DPA-both.png}
     \caption[Distribution of control galaxy $\Delta$PAs]{Distribution of both CPSB and RPSB control galaxy stellar and gas velocity field position angle difference  $\Delta$PAs. CPSBs distributions are plotted in green, RPSBs in yellow with hatching.}
     \label{fig:controlDeltaPAs}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{images/JupyterPlots/DIST-DPA-CPSB+FLAGS+controls.png}
     \caption{Distribution of CPSB stellar and gas velocity position angle difference $\Delta$PA vs. their CPSB controls. Note the CPSBs selected are a subset where their gas and stellar kinematic map data has been flagged as usable. CPSBs PA distributions are plotted in red with their CPSB controls in yellow with hatching. The PA offset in CPSB $\Delta$PA is discussed in the text.}
     \label{fig:CPSBvsControlDeltaPAs}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{images/JupyterPlots/DIST-Good-RPSB+Flags+Controls.png}
     \caption{Distribution of RPSB stellar and gas velocity $\Delta$PA vs. their RPSB controls. Note the RPSBs selected are a subset where their gas and stellar kinematic map data has been flagged as usable. RPSB PA distributions are plotted in blue with their RPSB controls in yellow with hatching}
@@ -61,15 +61,13 @@ The velocity field position angle variance of the CPSB and PSB control galaxies 
 \end{figure}
 
 
-
-
-\subsection{The KS-test}
-The \textbf{Kolmogorov-Smirnov test} is a statistical test to determine if two samples come from the same underlying distribution, see e.g. \citet{hodges1958significance}. We implement this test using the SciPy package \texttt{scipy.stats.kstest} module\footnote{\href{}{https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ks\_2samp.html}}.
+% \subsection{The KS-test}
+To investigate the likelihood that the $\Delta$ position angles of the CPSBS, RPSBs, and their respective control galaxy groups we employ a \textbf{Kolmogorov-Smirnov test} (K-S) analysis. K-S analysis is a statistical test to determine if two samples come from the same underlying distribution, see e.g. \citet{hodges1958significance}. We implement this test using the Python SciPy package \texttt{scipy.stats.kstest} module\footnote{\href{}{https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ks\_2samp.html}}.
 
 We ran the two-sided K-S test statistic on the distribution of $\Delta$ position angles obtained from the \texttt{kinemetry} analysis. The results are given in Table \ref{tab:K-S-tests}. The statistical significance inferred from the from the K-S test is that a high value of the test statistic, typically > 0.1, together with a low p-value, < 0.1 indicates that the samples are drawn from different statistical distributions. Here we note that the CPSB and RPSB samples originate from different distributions, and also each sample is from a different distribution from its corresponding control galaxy sample. The Python implementation \texttt{scipy.stats.ks\_2samp} accepts samples of different sizes.
 
 \begin{table}
-\caption[Kolmogorov-Smirnov statistical test]{Kolmogorov-Smirnov statistical test on various $\Delta$PA sample distributions. A high value of the K-S statistic > 10\%, together with a low p-value, < 10\% indicates that the samples come from different statistical distributions.}
+\caption[Kolmogorov-Smirnov statistical test of $\Delta$PA distributions]{A Kolmogorov-Smirnov statistical test on various $\Delta$PA sample distributions. A high value of the K-S statistic \textgreater 10\%, together with a low p-value, \textless 10\% indicates that the samples may originate from different statistical distributions.}
 \label{tab:K-S-tests}
 \begin{tabular}{llcc}
 \hline
@@ -90,7 +88,7 @@ A summary of the final visual classification method is shown in Table \ref{tab:R
 
 \begin{table}
     \centering
-    \caption{Summary of the classification of Radon profile types as categorised visually in the CPSB and RPSB groups and their control samples. A few galaxies could not be visually classified (NC) through the analysis due to masked areas in the central spaxels of the MaNGA maps, or otherwise low signal to noise areas to enable the \texttt{radon\_wrapper} code to produce sufficient transform results.}
+    \caption[Summary of Radon profile type visual classifications]{Summary of the classification of Radon profile types as categorised visually in the CPSB and RPSB groups and their control samples. A few galaxies could not be visually classified (NC) through the analysis due to masked areas in the central spaxels of the MaNGA maps, or otherwise low signal to noise areas to enable the \texttt{radon\_wrapper} code to produce sufficient transform results.}
     \label{tab:Radon-class-summary}
     \begin{tabular}{lc}
     \hline
@@ -109,7 +107,7 @@ A summary of the final visual classification method is shown in Table \ref{tab:R
 On completion of the Radon profile classification we investigate the distribution of the Radon profile types in each of the PSB categories (CPSB and RPSB) and their control samples (CPSB-controls and RPSB-controls). As mentioned earlier the visual classification was performed on the merits of the Radon output plots, Radon Transform (RT) and Radon profile trace without prior knowledge of the PSB group classification. A summary of the Radon profile visual classification assessments grouped by galaxy group category is provided in Table \ref{tab:Radon-VC-results}.
 
 \begin{table*}
-\caption{Results of the Radon profile visual classification assessments for the CPSB and RPSB samples and their control galaxies.  PSBs and their controls were assigned a Radon profile according to the appearance of the shape of the Radon profile trace plot. Where clear features were evident the galaxy was assigned a Radon profile Type as described in the text. Galaxies that were not classified due to poor data were flagged marked as NC. The percentage of each Type of those classified in the group shown in parentheses.}
+\caption[Radon profile visual classification CPSB and RPSB samples and their control galaxies]{Results of the Radon profile visual classification assessments for CPSB and RPSB samples and their control galaxies. PSBs and controls were assigned a Radon profile according to the appearance of the shape of the Radon profile trace plot. Where clear features were evident the galaxy was assigned a Radon profile Type as described in the text. Galaxies that could not be objectively classified due to poor data were flagged as 'not classified' (NC). The percentage of each Type of those classified in the group shown in parentheses.}
 \label{tab:Radon-VC-results}
 \begin{tabular}{lccccccc}
 \hline
@@ -151,7 +149,7 @@ PlateIFU  & Stellar PA & H$\alpha$ PA & $\Delta$PA & Radon profile\\
 
 \begin{table}
 \centering
-\caption{Similar to Table \ref{tab:offsetCPSBs-Radon-Type}. RPSBs with PA offset \textgreater 30\textdegree\ matched with their visually determined Radon profile Type.}
+\caption[RPSBs with PA offset \textgreater 30\textdegree\ matched with their visually determined Radon profile Type]{Similar to Table \ref{tab:offsetCPSBs-Radon-Type}. RPSBs with PA offset \textgreater 30\textdegree\ matched with their visually determined Radon profile Type.}
 \label{tab:offsetRPSBs-Radon-Type}
 \begin{tabular}{lcccc}
 \hline
