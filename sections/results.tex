@@ -61,7 +61,8 @@ The velocity field position angle variance of the CPSB and PSB control galaxies 
 \end{figure}
 
 
-% \subsection{The KS-test}
+\subsection{Kolmogorov-Smirnov test of position angle distributions}
+\label{sec:K-S-test}
 To investigate the likelihood that the $\Delta$ position angles of the CPSBS, RPSBs, and their respective control galaxy groups we employ a \textbf{Kolmogorov-Smirnov test} (K-S) analysis. K-S analysis is a statistical test to determine if two samples come from the same underlying distribution, see e.g. \citet{hodges1958significance}. We implement this test using the Python SciPy package \texttt{scipy.stats.kstest} module\footnote{\href{}{https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ks\_2samp.html}}.
 
 We ran the two-sided K-S test statistic on the distribution of $\Delta$ position angles obtained from the \texttt{kinemetry} analysis. The results are given in Table \ref{tab:K-S-tests}. The statistical significance inferred from the from the K-S test is that a high value of the test statistic, typically > 0.1, together with a low p-value, < 0.1 indicates that the samples are drawn from different statistical distributions. Here we note that the CPSB and RPSB samples originate from different distributions, and also each sample is from a different distribution from its corresponding control galaxy sample. The Python implementation \texttt{scipy.stats.ks\_2samp} accepts samples of different sizes.
@@ -126,7 +127,7 @@ Totals & 123 & \multicolumn{1}{l}{37 (30\%)} & 22 (18\%) & 19 (15\%) & 19 (15\%)
 
 The results of the visual classification exercise laid out in Table \ref{tab:Radon-VC-results} are portrayed graphically in Figure .   
 
-The Radon profile classification results summarised in Table \ref{tab:Radon-VC-results} which reveal that galaxies with bend features, Type-IB, Type-OB and Type-IB+OB, are clearly more prevalent in CPSBs (16 out of 27, or 59\% of galaxies classified) than in RPSBs (15 out of 36, or 42\% of those classified). A similar trend is found in the control groups: CPSB controls exhibit 18 out of 29, or 62\% with bend features, while RPSB controls have 11 out of 31, or 35\% with bend features. These results are portrayed graphically in Figure \ref{fig:Radon-grouped-barchart}.
+The Radon profile classification results summarised in Table \ref{tab:Radon-VC-results} reveal that galaxies with bend features, Type-IB, Type-OB and Type-IB+OB, are clearly more prevalent in CPSBs (16 out of 27, or 59\% of galaxies classified) than in RPSBs (15 out of 36, or 42\% of those classified). A similar trend is found in the control groups: CPSB controls exhibit 18 out of 29, or 62\% with bend features, while RPSB controls have 11 out of 31, or 35\% with bend features. These results are portrayed graphically in Figure \ref{fig:Radon-grouped-barchart}.
 
 \begin{figure}
     \centering
@@ -134,9 +135,6 @@ The Radon profile classification results summarised in Table \ref{tab:Radon-VC-r
     \caption{The results of the Radon profile visual classification exercise is shown for the 4 galaxy groups of interest: CPSBs, CPSB controls, RPSBs and their controls. The numerical frequency of each of the 5 Radon profile type features from Table \ref{tab:Radon-VC-results} presented graphically in this grouped bar plot. The colour coding of each type feature is shown in the legend.}
     \label{fig:Radon-grouped-barchart}
 \end{figure}
-
-Stark et al. (2018) [TODO: citation] conclude that Radon trace profiles may be linked to kinematic and morphological features in the following manner. [TODO: continue the write-up.]
-
 
 \begin{table}
 \centering

@@ -22,7 +22,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Basic setup. Most papers should leave these options alone.
 \documentclass[11pt,fleqn,usenatbib]{mnras} % mnras
-% \documentclass[11pt,usenatbib]{article} % mnras
 
 % MNRAS is set in Times font. If you don't have this installed (most LaTeX
 % installations will be fine) or prefer the old Computer Modern fonts, comment
@@ -61,9 +60,8 @@
  }
 %  total={170mm,257mm}
  
-% \usepackage{multicol} % not used
 
-\usepackage[section]{placeins}
+\usepackage[section]{placeins} %% May need to remove this if too much blank space.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -105,14 +103,12 @@
   \verbatiminput{#1.wcdetail}%
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %%%%%%%%%%%%%%%%%%% TITLE PAGE %%%%%%%%%%%%%%%%%%%
 
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
 % \title[Short title, max. 45 characters]{MNRAS \LaTeXe\ Kinematics of PSB galaxies}
-\title[Kinematics of PSB galaxies]{SDSS-IV MaNGA: Kinematics of PSB galaxies: detecting signatures of galaxy mergers} 
+\title[Kinematics of post-starburst galaxies]{SDSS-IV MaNGA: Kinematic studies of post-starburst galaxies: detecting signatures of galaxy mergers} 
 %[short title]{long title}
 
 % The list of authors, and the short list which is used in the headers.
@@ -132,7 +128,7 @@
 % Don't change these lines
 \begin{document}
 
-\input{sections/cover-page.tex} %%% This works!
+\input{cover-page.tex} %%% This works!
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % The MNRAS class isn't designed to include a table of contents, but for this document one is useful.
@@ -162,34 +158,19 @@
 \input{sections/abstract1.tex}
 \end{abstract}
 
-% Select between one and six entries from the list of approved keywords.
-% Don't make up new ones.
+% Select between one and six entries from the list of approved keywords. % Don't make up new ones.
 \begin{keywords}
 methods: data analysis, galaxies: kinematics and dynamics, galaxies: evolution
 \end{keywords}
 
-
-
 %%%%%%%%%%%%%%%%% BODY OF PAPER %%%%%%%%%%%%%%%%%%
 
-% \input{sections/word-counter.tex}
-
-%%TC:ignore
-    %   \input{sections/intro-guidance.tex}
-%%TC:endignore
-
 \input{sections/introduction.tex}
-% \input{sections/mergers-morphology.tex} moved to the introduction.
-% \input{sections/m&m-guidance.tex}
-
 \input{sections/data.tex}
 
-\input{sections/kinematics.tex}
-\input{sections/kinemetry-assignment.tex}
-
 \input{sections/methods.tex}
-
 \input{sections/Radon-transform.tex}
+
 \input{sections/results.tex}
 \input{sections/binning-methods.tex}
 \input{sections/discussion.tex}
@@ -199,24 +180,12 @@ methods: data analysis, galaxies: kinematics and dynamics, galaxies: evolution
 \input{sections/acknowlegements.tex}
 %TC:endignore
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%
 
-% The best way to enter references is to use BibTeX:
-
-%\bibliographystyle{mnras}
-%\bibliography{example} % if your bibtex file is called example.bib
-%----------- REFERENCES ------------------%
 \bibliographystyle{mnras}
 \bibliography{JPbib2019} 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %%%%%%%%%%%%%%%%% APPENDICES %%%%%%%%%%%%%%%%%%%%%
-
-% include your \appendix here
 
 \appendix
 \input{appendices/Visual-classification.tex}
