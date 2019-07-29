@@ -7,18 +7,36 @@ The MaNGA DAP utilises various spaxel binning models to process the IFU fibre bu
     \item HYB10 - Hybrid binning: Voronoi S/N 10 binning for stellar velocity maps, but unbinned for emission line properties which are used to generate gas velocity maps.
 \end{itemize}  
 
-In this study we have utilised MaNGA datacubes released in DR15 MPL-7 which have been processed in the DAP using the hybrid HYB10 binning model, i.e. using VOR10 binning for the stellar velocity maps. Currently the MaNGA project team have an internal dataset available, MPL-8. Datacubes in MPL-8 include VOR10 and SPX binning schema. We were interested to make a comparison of the Radon trace profiles generated from the datacubes using the Voronoi and SPX binning schemas. A limited sample of MPL-8 cubes were made available for this comparison exercise. We selected 2 galaxies from our samples with stellar velocity maps having poor spatial definition, and another 2 with good resolution in order to compare the Radon transform profiles using the Voronoi and SPX binning methods. The selected datacubes were: examples of good resolution/definition in stellar velocity maps:
+In this study we have utilised MaNGA datacubes released in DR15 MPL-7 which have been processed in the DAP using the hybrid HYB10 binning model, i.e. using VOR10 binning for the stellar velocity maps. However, the MaNGA project team currently have an internal dataset available, MPL-8. Datacubes in MPL-8 include VOR10 and SPX binning schema. We were interested to make a comparison of the Radon trace profiles generated from the datacubes using the Voronoi and SPX binning schemas. A limited sample of MPL-8 cubes were made available for this comparison exercise. We selected 2 galaxies from our samples with stellar velocity maps having poor spatial definition, and another 2 with good resolution in order to compare the Radon transform profiles using the Voronoi binning and SPX (unbinned) methods. The selected datacubes were: examples of good resolution/definition in stellar velocity maps:
 
 \begin{itemize}
     \item 7977-12704
     \item 8322-1901
 \end{itemize}
 
-and examples of poor resolution/definition in stellar velocity maps (i.e. having a blotchy appearance), some with masked spaxels:
+and examples of poor resolution/definition in stellar velocity maps (i.e. having a blotchy appearance, due to spatial binning of low S/N spaxels), and some with masked spaxels:
 
 \begin{itemize}
     \item 9088-12703
     \item 8993-6104
 \end{itemize}
 
-The stellar velocity maps and their Radon trace profiles for these examples are shown in Figure [TODO]: Voronoi binning and SPX binning. A comparison shows...
+The stellar velocity maps and their Radon transform and trace profiles for these examples are shown in Figure \ref{fig:binning-comparison}. The differences being the binning models, Voronoi binning and SPX binning, of the input stellar velocity maps. 
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=\columnwidth]{images/RadonPlots/RT-SNIPS-NEW/7977-12704-VOR10-MILESHC-MILESHC-1-SNIP.png}
+    \includegraphics[width=\columnwidth]{images/RadonPlots/RT-SNIPS-NEW/7977-12704-SPX-MILESHC-MILESHC-1-SNIP.png}
+    \caption{Radon transform output graphic for the galaxy 7977-12704. In the left panel the transform RT and profile trace plots are generated from the stellar velocity map with Voronoi binning. The plots in the right panel were produced from the stellar velocity map using single spaxel SPX binning. The layout of the 4 subplots in each panel is as described in Figure \ref{fig:8442-3704-complete}.}
+    \label{fig:binning-comparison}
+\end{figure*}
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=\columnwidth]{images/RadonPlots/RT-SNIPS-NEW/8993-6104-VOR10-MILESHC-MILESHC-1-SNIP.png}
+    \includegraphics[width=\columnwidth]{images/RadonPlots/RT-SNIPS-NEW/8993-6104-SPX-MILESHC-MILESHC-1-SNIP.png}
+    \caption{Radon transform output graphic for the galaxy 8993-6104. In the left panel the transform RT and profile trace plots are generated from the stellar velocity map with Voronoi binning. The plots in the right panel were produced from the stellar velocity map using single spaxel SPX binning. The layout of the 4 subplots in each panel is as described in Figure \ref{fig:8442-3704-complete}.}
+    \label{fig:binning-comparison2}
+\end{figure*}
+
+A comparison shows that for the velocity maps with good resolution, 7977-12704, shown in Figure \ref{fig:binning-comparison}, and 8322-1901 (not included) there is little difference in the Radon transform and Radon profile plots. This would lead to the same Type classification. This does not hold for the low resolution examples, 9088-12703 and 8993-6104. In these cases there are marked differences in the extent of spatial coverage and shapes of the velocity field PA, the Radon transform minimum and the Radon profile. In particular, the control galaxy 8993-6104, shown in Figure \ref{fig:binning-comparison2}, displays a clearly asymmetric Radon profile with Vononoi binning which could be interpreted as an outer bend in the Radon profile trace of the SPX map. Although these differences can be expected due to the exclusion of low S/N low spaxels in the SPX maps, crucially this can easily lead to a different visual classification result between the transforms of Voronoi binned and SPX velocity field maps.    
