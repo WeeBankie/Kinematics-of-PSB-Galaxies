@@ -61,11 +61,11 @@ The velocity field position angle variance of the CPSB and PSB control galaxies 
 \end{figure}
 
 
-\subsection{Kolmogorov-Smirnov test of position angle distributions}
+\subsection{Position angle distributions}
 \label{sec:K-S-test}
-To investigate the likelihood that the $\Delta$ position angles of the CPSBS, RPSBs, and their respective control galaxy groups we employ a \textbf{Kolmogorov-Smirnov test} (K-S) analysis. K-S analysis is a statistical test to determine if two samples come from the same underlying distribution, see e.g. \citet{hodges1958significance}. We implement this test using the Python SciPy package \texttt{scipy.stats.kstest} module\footnote{\href{}{https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ks\_2samp.html}}.
+To investigate the likelihood that $\Delta$ position angles of the CPSBs, RPSBs, and their respective control galaxy groups we employ a \textbf{Kolmogorov-Smirnov test} (K-S) analysis. K-S analysis is a statistical test to determine if two samples come from the same underlying distribution, see e.g. \citet{hodges1958significance}. We implement this test using the Python SciPy package \texttt{scipy.stats.kstest} module\footnote{\href{}{https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ks\_2samp.html}}.
 
-We ran the two-sided K-S test statistic on the distribution of $\Delta$ position angles obtained from the \texttt{kinemetry} analysis. The results are given in Table \ref{tab:K-S-tests}. The statistical significance inferred from the from the K-S test is that a high value of the test statistic, typically > 0.1, together with a low p-value, < 0.1 indicates that the samples are drawn from different statistical distributions. Here we note that the CPSB and RPSB samples originate from different distributions, and also each sample is from a different distribution from its corresponding control galaxy sample. The Python implementation \texttt{scipy.stats.ks\_2samp} accepts samples of different sizes.
+We ran the two-sided K-S test statistic on the distribution of $\Delta$ position angles obtained from the [TODO: what analysis CD] analysis. The results are given in Table \ref{tab:K-S-tests}. The statistical significance inferred from the from the K-S test is that a high value of the test statistic, typically > 0.1, together with a low p-value, < 10$^{-4}$ indicates that the samples are drawn from different statistical distributions. Here we note that the CPSB and RPSB samples originate from different distributions, and also each sample is from a different distribution from its corresponding control galaxy sample. The Python implementation \texttt{scipy.stats.ks\_2samp} accepts samples of different sizes.
 
 \begin{table}
 \caption[Kolmogorov-Smirnov statistical test of $\Delta$PA distributions]{A Kolmogorov-Smirnov statistical test on various $\Delta$PA sample distributions. A high value of the K-S statistic \textgreater 10\%, together with a low p-value, \textless 10\% indicates that the samples may originate from different statistical distributions.}
@@ -74,10 +74,10 @@ We ran the two-sided K-S test statistic on the distribution of $\Delta$ position
 \hline
 $\Delta$PA sample 1  & $\Delta$PA sample 2 & K-S statistic & p-value \\
 \hline
-CPSB & RPSB & 0.467 & 0.040 \\
-CPSB & CPSB controls & 0.755 & 0.000 \\
-RPSB & RPSB controls & 0.520 & 0.000 \\
-CPSB controls & RPSB controls & 0.197 & 0.001 \\
+CPSB & RPSB & 0.467 & 4.0$\times10^{-2}$ \\
+CPSB & CPSB controls & 0.755 & 5.3$\times10^{-6}$ \\
+RPSB & RPSB controls & 0.520 & 5.1$\times10^{-7}$ \\
+CPSB controls & RPSB controls & 0.197 & 1.3$\times10^{-3}$ \\
 \hline
 \end{tabular}
 \end{table}
@@ -85,11 +85,11 @@ CPSB controls & RPSB controls & 0.197 & 0.001 \\
 \subsection{Radon profile classification}
 \label{sec:Radon-profile-classification}
 
-A summary of the final visual classification method is shown in Table \ref{tab:Radon-class-summary}. The results of the Radon profile classification process for each of the individual target galaxies is provided in Appendix \ref{sec:visual-classification-tables}, Table \ref{tab:full-visual-classification}. 
+A summary of the final visual classification method is shown in Table \ref{tab:Radon-class-summary}.  A few galaxies could not be visually classified (NC) because of masked areas in the central spaxels of the MaNGA maps, or low S/N regions. These deficiencies prevented the Radon transform code from providing sufficient trace profile data points to enable visual classification. The results of the Radon profile classification process for each of the individual target galaxies is provided in Appendix \ref{sec:visual-classification-tables}, Table \ref{tab:full-visual-classification}. 
 
 \begin{table}
     \centering
-    \caption[Summary of Radon profile type visual classifications]{Summary of the classification of Radon profile types as categorised visually in the CPSB and RPSB groups and their control samples. A few galaxies could not be visually classified (NC) through the analysis due to masked areas in the central spaxels of the MaNGA maps, or otherwise low signal to noise areas to enable the \texttt{radon\_wrapper} code to produce sufficient transform results.}
+    \caption[Summary of Radon profile type visual classifications]{Summary of the classification of Radon profile types as categorised visually in the CPSB and RPSB groups and their control samples.}
     \label{tab:Radon-class-summary}
     \begin{tabular}{lc}
     \hline
@@ -129,7 +129,7 @@ The results of the visual classification exercise summarised in Table \ref{tab:R
 
 \begin{figure}
     \centering
-    \includegraphics[width=\columnwidth]{images/JupyterPlots/RESULTS-BAR-GROUPED.png}
+    \includegraphics[width=\columnwidth]{images/JupyterPlots/Radon-profile-types-grouped.png}
     \caption{The results of the Radon profile visual classification exercise is shown for the 4 galaxy groups of interest: CPSBs, CPSB controls, RPSBs and their controls. The numerical frequency of each of the 5 Radon profile type features from Table \ref{tab:Radon-VC-results} presented graphically in this grouped bar plot. The colour coding of each type feature is shown in the legend.}
     \label{fig:Radon-grouped-barchart}
 \end{figure}

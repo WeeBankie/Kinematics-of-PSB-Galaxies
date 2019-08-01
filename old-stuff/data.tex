@@ -1,13 +1,15 @@
 \section{Data}
 \label{sec:data}
 
+For this work we utilise a sample of 68 PSBs drawn from the SDSS-IV MaNGA (Mapping Nearby Galaxies at Apache Point Observatory) integral field spectroscopic survey. The PSB sample comprises 31 CPSBs and 37 RPSBs. This sample, and a control sample of approximately 480 normal galaxies (without large PSB regions),  were kindly provided by Chen et al. (2019, submitted).
+
 \subsection{The SDSS-IV MaNGA survey}
 \label{sec:MaNGA}
-The data used in this work includes galaxy stellar velocity and gas velocity kinematic maps, and spectral index maps and individual spectra drawn from the Sloan Digital Sky Survey (SDSS) phase IV project MaNGA (Mapping Nearby Galaxies at Apache Point Observatory). An overview of the SDSS-IV MaNGA project is provided by \citet{2015ApJ...798....7B}, where key instrumentation features and observational strategy employed by MaNGA are dithered observations with 17 fibre-bundle integral
-field units (IFU) that vary in diameter from 12 (19 fibres) to 32 (127 fibres). Two dual-channel spectrographs provide
-simultaneous wavelength coverage over the range 3600 to 10300 \AA\ at a spectral resolution of R $\sim$2000. MaNGA is an integral field spectroscopic survey (IFS) which provides spatially resolved properties of galaxies and can provide evidence of external influences such as close neighbour interaction, present merger activity and the signatures of past merger history. 
+The data used in this work includes galaxy stellar velocity and gas velocity kinematic maps, spectral index maps and individual spectra drawn from the Sloan Digital Sky Survey (SDSS) phase IV project MaNGA (Mapping Nearby Galaxies at Apache Point Observatory). An overview of the SDSS-IV MaNGA project is provided by \citet{2015ApJ...798....7B}, where key instrumentation features and observational strategy are described. MaNGA captures dithered observations with 17 fibre-bundle integral
+field units (IFUs) that vary in size from 19 fibres to 127 fibres (3-7 hexagonal layers). Two dual-channel spectrographs provide
+simultaneous wavelength coverage over the range 3600 to 10300 \AA\ at a spectral resolution of R$\sim$2000. MaNGA is an integral field spectroscopic survey (IFS) which provides spatially resolved properties of galaxies and can provide evidence of external influences such as close neighbour interaction, present merger activity and the signatures of past merger history.
 
-We use data release DR15 of the SDSS MaNGA-IV survey \citep{2019ApJS..240...23A} and the associated FITS-format galaxy data summary table output from the MaNGA data reduction pipeline (DRP) \texttt{drpall} file version 2.4.3 as described by \citet{2016AJ....152...83L}. The output of the DRP is fed to the MaNGA data analysis pipeline (DAP) which,  the purposes of this paper, provides:
+We use data release DR15 of the SDSS-IV MaNGA survey \citep{2019ApJS..240...23A} and the associated FITS-format galaxy data summary table output from the MaNGA data reduction pipeline (DRP) \texttt{drpall} file version 2.4.3 as described by \citet{2016AJ....152...83L}. The final data products of the DRP feed into the MaNGA data analysis pipeline (DAP) \citep{2016AJ....152...83L,2019arXiv190100856W} which, the purposes of this paper, provides:
 \begin{itemize}
     \item Spatially stacked spectra
     \item Stellar kinematics (velocity, V, and velocity dispersion, $\sigma$)
@@ -15,9 +17,9 @@ We use data release DR15 of the SDSS MaNGA-IV survey \citep{2019ApJS..240...23A}
     \item Spectral Indices: absorption-line (e.g.  H$\delta_A)$ and bandhead (e.g., D$_n$4000) measurements
 \end{itemize}
 
-The above datasets are available in the form of 3-D (2 spatial dimensions and 1 spectral wavelength dimension) datacubes referenced by MaNGA unique object ID or in the form of PLATE-IFU either of which can be accessed downloaded from the SDSS science archive server or by using the Marvin web interface tool \citep{2018arXiv181203833C}. The DRP data fields of interest used in this project are listed in Table \ref{tab:DRPall-table}.
+The above datasets are available in the form of 3-D (2 spatial dimensions and 1 spectral wavelength dimension) datacubes can be downloaded from the SDSS science archive server or by using the Marvin web interface tool \citep{2018arXiv181203833C}. The DRP data fields used in this project are listed in Table \ref{tab:DRPall-table}.
 
-\begin{table*}[h]
+\begin{table*}
 \caption[MaNGA DRPALL fields used in the project]{SDSS MaNGA DRPALL data fields of interest used in the project}
 \label{tab:DRPall-table}
 \begin{tabular}{|p{3.2cm}|p{1.2cm}||p{1cm}|p{10cm}|}
@@ -44,7 +46,6 @@ As noted in the introduction post-starburst galaxies or PSB regions of galaxies 
 
 The PSB candidate selection process involves extracting data from the MaNGA DAP output DAPTYPE MAPS-SPX-GAU-MILESHC: where SPX denotes individual spaxel binning; GAU a Gaussian fit algorithm to stellar spectra; and MILESHC is a reference to the MILES library \citep{2011A&A...532A..95F} of stellar spectrum templates, all as described in the MaNGA DR15 DAP documentation \citet{2019arXiv190100856W}. 
 The 2-D maps provide the following data: 
-
 \begin{itemize}
     \item Projected stellar rotation velocity
     \item Stellar velocity dispersion
@@ -54,18 +55,12 @@ The 2-D maps provide the following data:
 
 While the associated 3-D datacubes MAPS-VOR10-GAU-
 MILESHC provide spatial spectral series yielding the following spectral properties across the galaxy field-of-view:
-
 \begin{itemize}
     \item D$_n$4000 spectral index as a measure of the strength of the 4000 \AA\ break
     \item H$\delta_A$ absorption spectral index
     \item Nebular emission line equivalent widths
 \end{itemize}
-
-The H$\delta_A$ absorption spectral index is the equivalent width of H$\delta$ 4102\AA\ line as described by \citet{1994ApJS...94..687W}.
-
-
-The PSB sample employed in this work is that obtained from the sampling criteria adopted by Chen et al. (2019) in preparation, personal communication). Their sample was drawn from an analysis of 4633 galaxies made available as MPL-6 (SDSS-IV MaNGA Product Launch 6). The objective was to select PSB regions that have recently and rapidly quenched their star formation.  To achieve this goal Chen et al. (2019, in prep.) adopted the following sample selection criteria:
-
+The PSB sample employed in this work is that obtained from the sampling criteria adopted by Chen et al. (2019) in preparation, personal communication). Their sample was drawn from an analysis of 4633 galaxies made available as MPL-6 (SDSS-IV MaNGA Product Launch 6). The objective was to select PSB regions that have recently and rapidly quenched their star formation.  To achieve this goal Chen et al. (2019, submitted) adopted the following sample selection criteria:
 \begin{itemize}
     \item Spaxels with signal-to-noise S/N > 10 per pixel
     \item Strong H$\delta_A$ absorption line > 3\AA 
@@ -73,15 +68,12 @@ The PSB sample employed in this work is that obtained from the sampling criteria
     \item Weak H$\alpha$ equivalent width W(H$\alpha$) < 10\AA
     \item and $\log{W(H\alpha)} < 0.23\times{H\delta_A}-0.46$
 \end{itemize}
+The H$\delta_A$ absorption spectral index is the equivalent width of H$\delta$ 4102\AA\ line as described by \citet{1994ApJS...94..687W}. In addition to the above criteria, for a region to be classed as PSB at least 6 contiguous spaxels from the DAP analysis are required. To put the above selection criteria in context with the SDSS-IV MaNGA datacube output, example maps of D$_n$4000 spectral index, H$\delta_A$, and H$\alpha$ equivalent width W(H$\alpha$) are shown in Figure [TODO]. 
 
-In addition to the above, for a region to be classed as PSB at least 6 contiguous spaxels from the DAP analysis are required.
+Using MPL-6 data Chen et al. (2019) identified 360 galaxies possessing PSB spaxel regions meeting the above selection criteria. They then categorised the galaxies into 3 PSB types: those with central PSB regions (CPSBs); those with off-centre ring-like, or partial ring-like PSB features (RPSBs) and those with irregular regions of  PSB spaxels in the outskirts (irregulars or IPSBs). In fact, \citet{2018MNRAS.480.2544R} find that PSB regions are more common outside the central region. The selection process described above yielded a total of 31 CPSBs and 37 RPSBs as listed in Tables \ref{tab:my-CPSBs} and \ref{tab:my-RPSBs} respectively.
 
-To put the above selection criteria in context with the SDSS-IV MaNGA datacube output, example maps of D$_n$4000 spectral index, H$\delta_A$, and H$\alpha$ equivalent width W(H$\alpha$ are shown in Figure [TODO]. 
-
-Using MPL-6 data Chen et al. (2019) identified 360 galaxies possessing PSB spaxel regions meeting the above selection criteria. They then categorised the galaxies into 3 PSB types: those with central PSB regions (CPSBs); those with off-centre ring-like, or partial ring-like PSB features (RPSBs) and those with irregular regions of  PSB spaxels in the outskirts (irregulars or IPSBs). In fact, \citet{2018MNRAS.480.2544R} find that PSB regions are more common outside the central region. The selection process described above yielded a total of 31 CPSBs and 37 RPSBS as listed in Tables \ref{tab:my-CPSBs} and \ref{tab:my-RPSBs} respectively.
-
-\begin{table}[h]
-\caption{Central-type PSBs identified in MaNGA MPL-6}
+\begin{table}
+\caption{Central-type PSBs identified in MaNGA MPL-6 by Chen et al. 2019}
 \label{tab:my-CPSBs}
 \begin{tabular}{lccccc}
 \hline
@@ -123,8 +115,8 @@ PlateIFU & RA & dec & z & log & S\'ersic\\
 \end{tabular}
 \end{table}
 
-\begin{table}[h]
-\caption{Ring-type PSBs identified in MaNGA MPL-6}
+\begin{table}
+\caption{Ring-type PSBs identified in MaNGA MPL-6 by Chen et al. 2019}
 \label{tab:my-RPSBs}
 \begin{tabular}{lccccc}
 \hline
@@ -172,9 +164,9 @@ PlateIFU & RA & dec & z & log & S\'ersic \\
 \end{tabular}
 \end{table}
 
-The distribution of the CPSB and RPSB samples is shown in a colour-mass plot in Figure \ref{fig:Colour-Mass-PSBs}. The left panel shows the entire MaNGA DR15 sample distribution plotted as the NSA (NASA Sloan atlas) colour index $NUV - i$ versus galaxy stellar mass taken from NSA elpetro\_logmass data. The scatter plot distribution of galaxies and the underlying scatter plot shown the same blue cloud and red sequence distribution as discussed in section \ref{sec:evolution}. [TODO: extend this to describe the RH panel.]
+The distribution of the CPSB and RPSB samples is shown in a colour-mass plot in Figure \ref{fig:Colour-Mass-PSBs}. The left panel shows the entire MaNGA DR15 sample distribution plotted as the NSA (NASA Sloan atlas) colour index NUV-i versus galaxy stellar mass taken from NSA elpetro\_logmass data. The scatter plot distribution of galaxies and the underlying scatter plot shown the same blue cloud and red sequence distribution as discussed in section \ref{sec:evolution}. [TODO: extend this to describe the RH panel.]
 
-\begin{figure*}[h]
+\begin{figure*}
     \centering
     \includegraphics[width=\columnwidth]{images/CMDs/Colour-Mass-DR15-All.png}
     \includegraphics[width=\columnwidth]{images/CMDs/Colour-Mass-DR15-PSBs.png}
@@ -213,7 +205,7 @@ The spectrum of a PSB galaxy exhibiting central PSB features is shown in Figure 
 \end{figure*}
 
 
-The spectrum of a ring-type RPSB galaxy exhibiting non-central PSB features is shown in Figure \ref{fig:RPSB-8323-6103-spec}.
+The spectrum obtained from the central spaxel of a ring-type RPSB galaxy is shown in Figure \ref{fig:RPSB-8323-6103-spec}. The central spectrum obtained at spaxel coordinates [27,27] shows strong H$\alpha$ emission consistent with the presence of an ample gas supply for continuing star formation. Moving away from the central spaxel, in the direction towards the upper right of the IFU frame, the spectrum at spaxel coordinates [34,32] exhibits the characteristics of a post-starburst region. The spectrum reveals weak emission lines and strong Balmer absorption lines typical of the stellar atmospheres of A-type stars. This indicates the presence of a ring-type PSB feature at this location.
 \begin{figure*}
     \centering
     \includegraphics[width=0.24\textwidth]{images/Cutouts/RPSB-8323-6103-IM.png}
@@ -222,18 +214,20 @@ The spectrum of a ring-type RPSB galaxy exhibiting non-central PSB features is s
     \hfill
     \includegraphics[width=0.35\textwidth]{images/Spectra/RPSB-8323-6103-34-32.png}
     \caption{Left: SDSS 3-colour image of the ring-type PSB 8323-6103. 
-    Centre: The observed frame spectrum of the central region of ring-type PSB 8323-6103 at spaxel coordinates [27, 27] reveals strong H$\alpha$ emission consistent with an ample gas supply for continuing star formation.
-    Right: The spectrum of ring-type PSB 8323-6103 at spaxel coordinates [34, 32], above and right of centre. The spectrum in this region exhibits the post-starburst features of weak emission lines, indicating a lack of gas, and strong Balmer absorption lines typical of the stellar atmospheres of A-type stars.}
+    Centre: The observed frame spectrum of the central region of ring-type PSB 8323-6103 at spaxel coordinates [27, 27] reveals strong H$\alpha$ emission. 
+    Right: The spectrum of ring-type PSB 8323-6103 at spaxel coordinates [34, 32], above and right of centre. The spectra in this region exhibit post-starburst features of weak emission lines and strong Balmer absorption lines.}
     \label{fig:RPSB-8323-6103-spec}
 \end{figure*}
 
-An example of the MaNGA stellar velocity and gas velocity maps for a CPSB is illustrated in Figure \ref{fig:CPSB-8313-6101-VMAPS}.
+\subsection{Velocity maps}
+Our kinematic studies employ stellar and gas velocity maps obtained from SDSS MaNGA datacubes. Examples of MaNGA stellar velocity and gas velocity maps for the CPSB 8313-6101 is illustrated in Figure \ref{fig:CPSB-8313-6101-VMAPS}. In our kinematic analysis we are looking for anomalies in the velocity fields, such as non-linear radial variation, which may provide evidence of past merger activity.
 
-\begin{figure}
+\begin{figure*}
     \centering
-\includegraphics[width=\columnwidth]{images/VelocityMaps/CPSB-8313-6101-VMAPS.png}
+\includegraphics[width=0.9\textwidth]{images/VelocityMaps/CPSB-8313-6101-VMAPS.png}
     \caption{MaNGA velocity maps for CPSB 8313-6101: stellar velocity (left) and H$\alpha$ gas velocity (right).}
     \label{fig:CPSB-8313-6101-VMAPS}
-\end{figure}
+\end{figure*}
+
 
 
