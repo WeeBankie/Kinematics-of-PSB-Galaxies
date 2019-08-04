@@ -1,18 +1,18 @@
-\section{Methods I: Kinematic position angle analysis}
+\section{Kinematic position angle analysis}
 \label{sec:methods-I-kinemetry}
 
 \subsection{Kinematic PA analysis method description}
-\label{kinemetry-analysis-method-description}
+\label{sec:kinemetry-analysis-method-description}
 % \subsection{Quality screening}
-Global kinematic velocity position angles (PA) for the PSB and control galaxy samples were determined using the \texttt{fit\_kinemetry\_pa} IDL routine as described in appendix C of \cite{2006MNRAS.366..787K}. The code returns the angle of the line bisecting the greatest change in a stellar or gas velocity field between the receding and approaching sides. The \texttt{fit\_kinemetry\_pa} IDL code and a Python 3 package known as \texttt{PaFit} are available via Michele Cappellari's website\footnote{http://www-astro.physics.ox.ac.uk/~mxc/software/\#pafit}. We downloaded the \texttt{PaFit} package and successfully tested this code fitting kinematic position angles to the model velocity fields provided. 
+Global kinematic velocity position angles (PA) for the PSB and control galaxy samples were determined using the \texttt{fit\_kinemetry\_pa} IDL routine as described in appendix C of \cite{2006MNRAS.366..787K}. The code returns the angle of the line bisecting the greatest change in a stellar or gas velocity field between the receding and approaching sides. The \texttt{fit\_kinemetry\_pa} IDL code and a Python 3 package known as \texttt{PaFit} are available via Michele Cappellari's website\footnote{\href{http://www-astro.physics.ox.ac.uk/~mxc/software/\#pafit}{http://www-astro.physics.ox.ac.uk/~mxc/software/\#pafit}}. We downloaded the \texttt{PaFit} package and successfully tested this code fitting kinematic position angles to the model velocity fields provided. 
 
 
-\cite{2019MNRAS.483..172D} performed a kinematic position angle analysis of over 8,000 galaxies from the MaNGA Product Launch MPL-8 internal data release. In order to obtain a clean sample of well defined global PAs they visually classified the stellar and H$\alpha$ gas velocity fields of all galaxies in their sample into 3 categories (Chris Duckworth, 2019, personal communication), and set flags in their dataset as follows:
+\cite{2019MNRAS.483..172D} performed a kinematic position angle analysis on over 8,000 galaxies from the MaNGA Product Launch MPL-8 internal data release. In order to obtain a clean sample of well defined global PAs they visually classified the stellar and H$\alpha$ gas velocity fields of all galaxies in their sample into 3 categories (Chris Duckworth, 2019, personal communication), and set flags in their dataset as follows:
 
 \begin{itemize}
-    \item {Flag 1} : Dominant coherent rotation and well defined PA
-    \item {Flag 2} : Dominant coherent rotation but with complex motions or highly inclined velocity fields 
-    \item {Flag 3} : Do not use
+    \item {Flag 1}  Dominant coherent rotation and well defined PA
+    \item {Flag 2}  Dominant coherent rotation but with complex motions or highly inclined velocity fields 
+    \item {Flag 3}  Do not use
 \end{itemize}
 
 During this analysis galaxies with significant kinematic features such kinematically decoupled cores (KDCs) and warped velocity fields were also identified.
@@ -23,7 +23,7 @@ Examples of PSBs with misaligned stellar and gas velocity fields for a CPSB and 
 
 \begin{figure*}
     \centering
-    \includegraphics[width=0.8\textwidth]{images/PAplots/PAplotsCPSB/8313-6101-PA.pdf}
+    \includegraphics[width=0.9\textwidth]{images/PAplots/PAplotsCPSB/8313-6101-PA.pdf}
     \includegraphics[width=0.8\textwidth]{images/PAplots/PAplotsRPSB/8323-6103-PA.pdf}
     \caption[Examples of PSBs showing significant kinematic PA misalignment $\Delta$PA$_{k}$: CPSB 8313-6101 and RPSB 8323-6103.]{Illustration of velocity field maps with fitted kinematic position angles (PA$_{k}$) showing considerable misalignment. The stellar velocity fields (left) and gas velocity fields (right) are shown for CPSB 8313-6101 (top), and RPSB 8323-6103 (bottom). The position angles of the velocity field (gas or stars) are displayed as green solid lines, while the black dashed lines denotes the bisector of the velocity fields between the receding (red) and approaching (blue) sides. The velocity colour scale is \kms. Credit for data analysis and plots: Chris Duckworth.}
     \label{fig:CPSB-8313-6101-PA}
@@ -31,7 +31,7 @@ Examples of PSBs with misaligned stellar and gas velocity fields for a CPSB and 
 
 \subsection{Position angle misalignment}
 \label{PA-misalignment}
-The gas and velocity field position angle misalignment measurements for PSBs where the $\Delta$PA \textgreater 30\textdegree are tabulated in Figure \ref{tab:offsetCPSBs} for the CPSBs, and Figure \ref{tab:offsetRPSBs} for the RPSBs. Here is can be seen that the number of PSBs galaxies having clearly defined $\Delta$PAs, i.e. \textgreater 30\textdegree, is small fraction of the PSB sample: 5 out of 30 (17\%) CPSBs, and 9 out of 37 (24\%) RPSBs.
+The gas and velocity field position angle misalignment measurements for PSBs where the $\Delta$PA \textgreater 30\textdegree are tabulated in Table \ref{tab:offsetCPSBs} for the CPSBs, and Table \ref{tab:offsetRPSBs} for the RPSBs. Here it can be seen that the number of PSBs galaxies having clearly defined $\Delta$PAs, i.e. \textgreater 30\textdegree, is small fraction of the PSB sample: 5 out of 30 (17\%) CPSBs, and 9 out of 37 (24\%) RPSBs.
 
 \begin{table}
 \centering

@@ -1,4 +1,4 @@
-\section{Methods II: The Radon transform}
+\section{Radon transform analysis}
 \label{sec:methods-II-Radon}
 
 \subsection{Motivation}
@@ -36,7 +36,7 @@ where $v(x,y)$ is a 2D velocity field defined in Cartesian coordinates and $\int
     R_A=\int{| v(x,y) - \langle v(x,y) \rangle | \, \diff l}.
 \end{equation}
 
-There is another variant to the Absolute Radon Transform described by \citet{2018MNRAS.480.2217S} named the \textit{bounded}, or aperture restricted, Radon transform, R\textsubscript{AB}. Briefly, R\textsubscript{AB} involves placing integration limits $(\pm{r_{ap}})$, known as the aperture, on the integral of Equation \ref{eqn:radon_absolute} in order to limit the number of spaxels across a velocity map that will be used in the integration. \citet{2018MNRAS.480.2217S} developed a set of IDL (Interactive Data Language) algorithms to calculate the Radon transform on an input array representing a velocity field. The Radon transform IDL code is available on GitHub\footnote{https://github.com/dvstark/radon-transform}. 
+There is another variant to the Absolute Radon Transform described by \citet{2018MNRAS.480.2217S} named the \textit{bounded}, or aperture restricted, Radon transform, R\textsubscript{AB}. Briefly, R\textsubscript{AB} involves placing integration limits $(\pm{r_{ap}})$, known as the aperture, on the integral of Equation \ref{eqn:radon_absolute} in order to limit the number of spaxels across a velocity map that will be used in the integration. \citet{2018MNRAS.480.2217S} developed a set of IDL (Interactive Data Language) algorithms to calculate the Radon transform on an input array representing a velocity field. The Radon transform IDL code is available on GitHub\footnote{\href{https://github.com/dvstark/radon-transform}{https://github.com/dvstark/radon-transform}}. 
 The graphical output of the Radon transform code as applied to a synthetic velocity field is shown in Figure \ref{fig:Radon}.
 
 \begin{figure}

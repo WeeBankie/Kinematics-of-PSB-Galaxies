@@ -1,6 +1,8 @@
 \section{Discussion and conclusions}
 \label{sec:discussion}
 
+\input{sections/binning-methods.tex}
+
 \cite{2018MNRAS.480.2217S} made a considerable effort to explore a possible link between the observed frequencies of the 5 Radon profile types and underlying morphological features determined from the Galaxy Zoo morphology classification project. Their sample comprised $\sim$2500 galaxies from the SDSS MaNGA MPL-5 data release. This sample is representative of the entire galaxy population at z$\sim$0. They found evidence of weak associations between profile type and morphological features. These correlations are certainly not exclusive, and some care must be taken to follow their argument. The most prevalent of the identified relationships can be broadly interpreted as follows:
 \begin{itemize}
     \item Type-C: Constant profile - frequently apparent in unbarred galaxies.
@@ -9,22 +11,26 @@
     \item Type-OB: Outer bends - associated with kinematic warps.
 \end{itemize}
 
+
+
 \subsection{Findings}
 \label{findings}
 Generally CPSBs show a wide range of kinematic position angle differences $\Delta$PA$_{k}$ \textgreater 30\textdegree\ with many in the range 90 \textless $\Delta$PA$_{k}$ \textless 180\textdegree. RPSBs show a smaller range in $\Delta$PA$_{k}$ with only a few over 90\textdegree. The majority of control galaxies have small kinematic position angle differences, mainly less than 25\textdegree. Significant misalignment in the gas and stellar velocity fields of CPSBs, and to a lesser extent RPSBs, is indicative of past or ongoing disturbances as could be expected from major mergers.
 We note that the distribution $\Delta$PA$_{k}$ is markedly different when comparing CPSBs with CPSB controls. This trait is also present, but to a lesser extent, in the comparison of the RPSB $\Delta$PA$_{k}$ with their controls. The distribution in differential kinematic position angles is similar for both control groups. These observations are supported by the results of K-S analysis in Section \ref{sec:K-S-test} where we find the difference in $\Delta$PA$_{k}$ of PSBs compared to their control groups to be statistically significant.
 
-We compared the Radon profile trace results obtained from stellar velocity maps employing Voronoi VOR10 binning versus single spaxel SPX binning in Section \ref{sec:binning-methods}. We obtain cleaner trace profiles with a greater number of valid data points and tighter error bars from higher S/N maps based on single spaxel SPX binning.
+We compared the Radon profile trace results obtained from stellar velocity maps employing Voronoi VOR10 binning versus the single spaxel SPX unbinned schema. We obtained cleaner trace profiles (i.e. easier to classify) with a greater number of valid data points and tighter error bars from high S/N maps based on single spaxel SPX binning. For future studies, given a large enough sample of PSBs, we should avoid Voronoi binned maps where possible and use SPX maps a cut of S/N \textgreater say 3-5 in single spaxels.
 
-[TODO] Kinemetry versus Radon transform. As described in Section \ref{sec:motivation} the Radon transform provides a distinct advantage over the kinemetry method in that it provides a detailed trace of the position angle across the velocity field enabling local regions of radial variation to be identified. 
+Kinematic PA analysis versus Radon transform: as described in Section \ref{sec:motivation} the Radon transform provides distinct advantages over the kinematic $\Delta$PA$_{k}$  method. Radon transforms provide a detailed trace of position angle across the velocity field enabling local regions of radial variation to be identified. Kinematic PAs require both stellar and gas velocity fields to be mapped but post-starburst galaxies may possess little gas. The Radon transform can trace disturbances as evidence of mergers using the stellar velocity field alone.
 
 Kinematic warps in the stellar discs of early-type field galaxies can be attributed to multiple stellar components suggestive of past dry mergers \citep{2005AJ....130.2647V}, although warps can also be sustained by tidal interactions.
-From this we draw the simple conclusion that Radon trace profiles displaying outer bends, Type-OB or Type-OB+IB can be considered prospective candidates past major mergers, or post-mergers. From Table \ref{tab:Radon-VC-results} we find that 10 of of 27 CPSBs (37\%) reveal Type-OB or Type-OB+IB Radon profile signatures. 
-As an area for future study we should consider a similar exercise to utilise the Galaxy Zoo morphology classifications together with Radon profile features identified in this present study. 
+From this we draw the simple conclusion that Radon trace profiles displaying outer bends, Type-OB or Type-OB+IB can be considered prospective candidates past major mergers, or post-mergers. From Table \ref{tab:Radon-VC-results} we find that 10 of of 27 CPSBs (37\%) reveal Type-OB or Type-OB+IB Radon profile signatures. As an area for future study we should consider a similar exercise to utilise the Galaxy Zoo morphology classifications together with Radon profile feature types as identified in this present study. 
 
 Visual classification of Radon profile types was found to be very difficult; all our classifiers agreed on this point. In addition our classifiers arrived at varying interpretations of profile type class for most of the galaxies. Although the same written classification procedure was followed, the method was quite loosely defined, recognising the difficulties in relating the race plots to the examples. With so few classifiers involved we conclude that there is significant classification error present in our results, remembering the the Galaxy Zoo project engaged $\sim10^5$ classifiers to minimise classification error.
 
 The results of the visual classification of the 5 Radon trace type profiles for CPSBs, RPSBs and their control groups as presented in Table \ref{tab:Radon-VC-results} and shown graphically in Figure \ref{fig:Radon-grouped-barchart} are quantitatively similar in number. This was unexpected and is presently not fully explained. We can, however, expect more galaxies with constant features in the RPSB groups than the CPSBs as RPSBs exhibit PSB features in local regions only while we can expect a higher percentage of the non-linear features, i.e. inner and outer bends and composite bend features Type-OB+IB, to be apparent in the trace profiles of CPSBs due to their central and more widespread post-starburst regions. Incorporating the the results from the second classifier a picture emerges that Type-OB features are 70\% more prevalent in both the CPSB sample to controls, and RPSBs to their controls. 
+
+
+
 
 \subsection{Summary}
 \label{summary}
