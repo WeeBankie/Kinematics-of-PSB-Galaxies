@@ -13,6 +13,11 @@
 
 \newcommand*\diff{\mathop{}\!\mathrm{d}} % upright d's in integrals
 
+\newcommand{\red}[1]{{\textcolor{red}{#1}}}
+\newcommand{\green}[1]{{\textcolor{green}{#1}}}
+\newcommand{\blue}[1]{{\textcolor{blue}{#1}}}
+
+
 %%% TeXcount ...
 
 \newcommand{\quickwordcount}[1]{\immediate\write18{texcount -1 -sum -merge -q #1.tex > #1-words.sum }\input{#1-words.sum} words}
