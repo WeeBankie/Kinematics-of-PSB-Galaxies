@@ -1,7 +1,7 @@
 \subsection{Radon profile classification}
 \label{sec:Radon-classification}
 
-\cite{2018MNRAS.480.2217S} identified 5 commonly recurring patterns in the stellar and gas Radon profiles of their MaNGA sample. These patterns were used to classify the Radon profiles observed in their MaNGA sample. In this work we adopt the same classification approach for the Radon profiles of the PSB galaxies and their control samples. Simplified models of 4 of the classes are shown in Figure \ref{fig:class-models}. In addition an asymmetric profile class was identified. The salient features of the Radon profile classes are listed below:
+\cite{2018MNRAS.480.2217S} identified 5 commonly recurring patterns in the stellar and gas velocity field Radon transform profiles of their MaNGA galaxy sample. These patterns were used to classify the computed Radon trace profiles. In this project work we adopt the same classification approach for the Radon profiles of our PSB galaxies and their control samples. Simplified models of 4 of the trace profile classes are shown in Figure \ref{fig:class-models}. In addition an asymmetric profile class was identified. Detailed examples of the trace profile class types are presented in Figure 7 of \cite{2018MNRAS.480.2217S}. The salient features of these 5 Radon profile classes are listed below:
 
 \begin{itemize}
     \item Constant, \textbf{Type-C} : Radon profile with relatively constant trace minimum angle $\hat{\theta}$ at all radii $\rho$.
@@ -21,20 +21,20 @@
 Mathematical functions describing these Radon profile classifications have been identified by \citet[][section 3.6]{2018MNRAS.480.2217S}. This has enabled code routines to be developed which can provide automatic classification of the Radon trace profiles for galaxies in MaNGA Product Launch MPL-5. The results of the automatic classification routines were made available later in the progress of this project work and therefore have not been used in this analysis. Instead, we have adopted a simple visual classification method to categorise our sample galaxy into one of the 5 Radon profile trace types listed above. The visual classification process is described in the following 3-step process:
 
 \begin{enumerate}
-    \item Firstly we obtain the MAPS datacube FITS files for the selected PSB galaxies listed in Tables \ref{tab:my-CPSBs} and \ref{tab:my-RPSBs}, and a similar number of 'normal' galaxies drawn from their respective control samples, as described in Section \ref{sec:controls}, downloaded from the MaNGA website.
-    \item Next, we process each of datacubes through the Radon transform wrapper code to obtain graphical output files showing the galaxy SDSS $gri$ image cutout, the MaNGA stellar velocity map, the absolute bounded Radon transform R\textsubscript{AB} plot and the Radon profile plot of $\hat{\sigma}$ versus $\rho$. An example of this output for the CPSB galaxy 8979-1902 is shown in Figure \ref{fig:CPSB-8979-1902-SNIP}. 
-    \item  Finally we examine the output plot for each galaxy and visually assess the relative qualitative strength of each of the 5 classification features by assigning a numeric weighting as given in Table \ref{tab:features}. This method adds a semi-quantitative approach to the visual assessment process.
+    \item Firstly we obtain the MAPS data cube FITS files for the selected PSB galaxies listed in Tables \ref{tab:my-CPSBs} and \ref{tab:my-RPSBs}, and a similar number of 'normal' galaxies drawn from their respective control samples, as described in Section \ref{sec:controls}, downloaded from the MaNGA website.
+    \item Next, we process each of data cubes through the Radon transform wrapper code to obtain graphical output files showing the galaxy SDSS $gri$ image cutout, the MaNGA stellar velocity map, the absolute bounded Radon transform R\textsubscript{AB} plot and the Radon profile plot of $\hat{\theta}$ versus $\rho$. An example of this output for the CPSB galaxy 8979-1902 is shown in Figure \ref{fig:CPSB-8979-1902-SNIP}. 
+    \item  Finally, we examine the output plot for each galaxy and visually assess the relative qualitative strength of each of the 5 classification features by assigning a numeric weighting as given in Table \ref{tab:features}. This method adds a semi-quantitative approach to the visual assessment process.
 \end{enumerate}
 
 \begin{figure*}
     \centering
-    \includegraphics[width=0.9\textwidth]{images/RadonPlots/RT-SNIPS-NEW/CPSB-8979-1902-SNIP.png}
-    \caption[Radon transform code output graphics for the CPSB 8979-1902]{Radon transform code output graphics for the CPSB 8979-1902. Top left: SDSS gri image cutout, Top right: stellar velocity map with kinematic PA shown as the magenta line, lower left: Radon transform (RT) of the stellar velocity field with the transform minimum plotted in magenta, lower right: Radon profile trace of the RT minimum.}
+    \includegraphics[width=0.8\textwidth]{images/RadonPlots/RT-SNIPS-NEW/CPSB-8979-1902-SNIP.png}
+    \caption[Radon transform code output graphics for the CPSB 8979-1902]{Radon transform code output graphics for the CPSB 8979-1902. Top left: SDSS gri image cutout, Top right: stellar velocity map with kinematic position angle (PA$_{k}$) shown as the magenta line, lower left: Radon transform (RT) of the stellar velocity field with the transform minimum angle $\hat\theta$ plotted across radius $\rho$ in magenta, lower right: the Radon profile trace of the RT minimum.}
     \label{fig:CPSB-8979-1902-SNIP}
 \end{figure*}
 
 \begin{table}
-    \caption[Relative weighting of Radon profile feature strengths used in visual classification]{Relative weighting of Radon profile feature strengths used in the visual classification of Radon profile feature types: Constant, Inner Bend, Outer Bend, Inner Bend + Outer Bend or Asymmetric. The weighting is applied to quantify the visual appearance of the trace profile plots.}
+    \caption[Relative weighting of Radon profile feature strengths used in visual classification]{Relative weighting of Radon profile feature strengths used for the visual classification of Radon profile feature types: Constant, Inner Bend, Outer Bend, Inner Bend + Outer Bend or Asymmetric. The weighting is assigned to help quantify the visual appearance of the trace profile plots.}
     \label{tab:features}
     \centering
     \begin{tabular}{cl}
@@ -48,14 +48,14 @@ Mathematical functions describing these Radon profile classifications have been 
     \end{tabular}
 \end{table}
 
-In order to avoid a sample induced bias the galaxies are visually assessed in alphanumerical order of their PLATEIFU file name tag. No other information is used in visual assessment process. This is intended to avoid the pitfall of assessing one group, CPSBs, RPSBs, or their respective control sample groups, where common features may be apparent in a particular group. 
+The Radon output graphic plots for all 127 the galaxies were visually assessed in alphanumerical order of their PLATEIFU file name tag, which effectively creates a random sequence. This is intended to avoid introducing a selection bias by assessing all galaxies in each group separately. one complete group at a time, CPSBs, RPSBs, or their respective control sample groups, where commonly recurring features may be apparent in a particular group but not in the others.
 
-After inspecting the Radon transform and associated Radon trace plots for a particular galaxy an assessment of the strength of the Radon profile type features evident in the plots. A feature strength values from Table \ref{tab:features} is assigned to each of the 5 predefined Type classes for the galaxy. Based on the relative strength values allocated a predominant feature Type (C, IB, OB, IB+OB or A) is assigned to that particular galaxy. To determine the relative predominance of Type-IB+OB features we simply sum the strength values assigned to Types IB and OB together. 
-In many cases there is some uncertainty in the absolute Type assessment, i.e. only one of the 5 defines classes, a secondary assessment is made,  generally this is the primary Type plus a less evident Type, or sub-dominant Type feature. The secondary assessment may be of use later in the analysis process.
+After inspecting the Radon transform and associated Radon trace plots for a particular galaxy an assessment of the visual strength of the Radon profile type features evident in the plots. A numerical value 0, 1 or 2, representing the visual strength of apparent features from Table \ref{tab:features}, is assigned to each of the 5 predefined Type classes for the galaxy. Based on the relative strength values allocated a predominant feature Type (C, IB, OB, IB+OB or A) is assigned to that particular galaxy. To determine the relative predominance of Type-IB+OB features we simply sum the strength values assigned to Types IB and OB together. 
+In many cases there is some uncertainty in the absolute Type assessment, i.e. only one of the 5 defines classes, a secondary assessment is made,  generally this is the primary Type plus a less evident Type, or sub-dominant Type feature. The secondary assessment may be of use later to refine the analysis process.
 
-As a demonstration of the Radon profile visual classification process we select the example of the spiral galaxy 8979-12701. The Radon transform and Radon profile trace for this galaxy are shown in Figure \ref{fig:OB+IB}. Comparing the Radon trace profile with the model traces in Figure \ref{fig:class-models} and the examples given in  \citet[Figure 7 of][]{2018MNRAS.480.2217S}, the visual classification process identified the strength of the features as: C = 1, IB = 2, OB = 2, IB+OB = 2+2 = 4, and A=0. This trace profile is comparable to the Type-OB+IB model and consequently the Radon profile of this galaxy is categorised as Type-OB+IB.
+As a demonstration of the Radon profile visual classification process we select the example of the spiral galaxy 8979-12701. The Radon transform and Radon profile trace for this galaxy are shown in Figure \ref{fig:OB+IB}. Comparing the Radon trace profile with the model traces in Figure \ref{fig:class-models} and the examples given in  Figure 7 of \cite{2018MNRAS.480.2217S}, the visual classification process identified the strength of the features as: C = 1, IB = 2, OB = 2, IB+OB = 2+2 = 4, and A=0. This trace profile is comparable to the Type-OB+IB model and consequently the Radon profile of this galaxy is categorised as Type-OB+IB.
 
-The classification process outlined above was carried out independently by 2 persons in an endeavour to provide some means of eliminating personal subjectivity, in a similar manner that the Galaxy Zoo project uses large-scale public collaboration to classify galaxy morphology \citep{2017MNRAS.464.4176W}. The results of the  independent assessments are reported in Tables \ref{tab:full-visual-classification} and \ref{tab:visual-classification-B} in Appendix \ref{sec:visual-classification-tables}.
+The classification process outlined above was carried out independently by 2 persons in an endeavour to provide some means of eliminating personal subjectivity. The intent is similar  to that adopted by the Galaxy Zoo project which used large-scale public collaboration to classify galaxy morphology \citep{2017MNRAS.464.4176W}. The galaxy-by-galaxy Radon profile Type classifications determined by the two assessors are listed in Tables \ref{tab:full-visual-classification} and \ref{tab:visual-classification-B} in Appendix \ref{sec:visual-classification-tables}.
 
 \begin{figure}
     \centering
@@ -64,7 +64,7 @@ The classification process outlined above was carried out independently by 2 per
     \label{fig:OB+IB}
 \end{figure}
 
-During the classification assignment exercise  some difficulties were encountered mainly with Radon trace profiles that did not fit easily into on of the 5 classification Types. An example of this is seen in the case of 8555-3701 where a clearly defined Inner Bend appears superimposed on an asymmetric trace as shown in Figure \ref{fig:8555-3701-A+IB}. The form of this trace does not fall readily into either of the Type-A or Type-IB categories, however faces with the choice and a requirement to chose one of the 5 categories, the consensus was to classify the predominant feature as asymmetric, Type-A. The reader may disagree and opt for Type-IB, or even Type-OB+IB. This demonstrates the challenges encountered in the visual classification of Radon profiles.
+During the classification assignment exercise  some difficulties were encountered mainly with Radon trace profiles that did not fit easily into on of the 5 classification Types. An example of this is seen in the case of 8555-3701 where a clearly defined Inner Bend appears superimposed on an asymmetric trace as shown in Figure \ref{fig:8555-3701-A+IB}. The form of this trace does not fall readily into either of the Type-A or Type-IB categories, however faced with a choice of Types, and a requirement to select only one of the 5 categories, the natural choice was to opt for the predominant feature, in this case Type-A, asymmetric. The reader may disagree and opt for Type-IB, or even Type-OB+IB. This demonstrates the challenges encountered in the visual classification of Radon profiles.
 
 \begin{figure}
     \centering
@@ -73,7 +73,7 @@ During the classification assignment exercise  some difficulties were encountere
     \label{fig:8555-3701-A+IB}
 \end{figure}
 
-In many other cases bends, or detectable velocity field disturbances, are evident as notches at well off-centre radii on otherwise constant or largely asymmetric traces. To obtain a comprehensive census at this level of detail these sub-dominant and off-centre features should be taken into account in a secondary analysis. Other than presenting an assessment of these mixed secondary classifications in Table \ref{tab:full-visual-classification}, we have not pursued an analysis in this present work.
+In many other cases bends, or detectable velocity field disturbances, are evident as notches at well off-centre radii on otherwise constant or largely asymmetric traces. To obtain a comprehensive census at this level of detail these sub-dominant and off-centre features should be taken into account in a secondary analysis. Other than presenting a listing of the mixed secondary classifications obtained by classifier A in Table \ref{tab:full-visual-classification}, we do not pursued more detailed secondary analysis in this present work.
 
 
 

@@ -1,21 +1,19 @@
 \section{Results and analysis}
 \label{sec:results}
 
-In this section we present the results of the three component areas of our investigation:
+In this section we present the results of the three main topic areas of our investigation:
 
 \begin{itemize}
-    \item Basic property distributions of PSBs and their controls derived from NSA data
+    \item Basic property distributions of PSB galaxies and their controls control groups derived from NSA data
     \item Kinematic position angle distributions
-    \item Radon transform profile classification results
+    \item Radon transform profile classification
 \end{itemize}
 
 \subsection{Basic property distributions of PSBs}
 \label{sec:property-distributions}
-Here examine the frequency distributions (histograms) comparing the characteristics of CPSBs, RPSBs an their control galaxies.
+Here we present frequency distributions comparing characteristic properties of CPSBs, RPSBs and their control galaxies. We compare the distributions of CPSBs with that of the RPSB sample in terms of the fundamental properties: S\'ersic index, stellar mass $M_*$, and redshift z. These distributions are obtained from MaNGA \texttt{drpAll} data as listed in  Appendix \ref{sec:lists-of-psbs}, Tables \ref{tab:my-CPSBs} and \ref{tab:my-RPSBs}. The frequency distribution histograms are plotted in Figures \ref{fig:Sersic-plot}, \ref{fig:stellar-mass-plot} and \ref{fig:redshift-plot} respectively.
 
-The surface brightness profile of a galaxy is generally a function of radius from the nucleus. The rate of change of brightness can be described by the S\'ersic function or S\'ersic  index (SI). Low values of SI $\sim$1 relate to disc-type galaxies, whereas SI values of 3 or more are measured in galaxies with compact bright nuclei, indicative of more evolved systems. We compare the distributions of CPSBs with that of the RPSB sample in terms of S\'ersic index, stellar mass $M_*$, and redshift z. These distributions are taken from the data in Tables \ref{tab:my-CPSBs} and \ref{tab:my-RPSBs}. The frequency distribution histograms are plotted in Figures \ref{fig:Sersic-plot}, \ref{fig:stellar-mass-plot} and \ref{fig:redshift-plot} respectively.
-
-The distribution of S\'ersic index values as shown in Figure \ref{fig:Sersic-plot} covers a wide range of values indicating a wide range of morphologies. CPSBs  generally have higher S\'ersic index values than RPBs. This suggests that CPBs tend to have concentrated nuclei and a spheroidal morphology contrary to the more disc-like RPSBs with lower SI-n values.
+\textbf{S\'ersic index (SI):} The surface brightness profile of a galaxy is generally a function of radius from the nucleus. The rate of change of brightness can be described by the S\'ersic function or S\'ersic index (SI). Low values of SI $\sim$1 relate to disc-type galaxies, whereas SI values of 3 or more are measured in galaxies with compact bright nuclei, indicative of more evolved systems. The distribution of S\'ersic index values as shown in Figure \ref{fig:Sersic-plot} covers a wide range of values indicating a wide range of morphologies. CPSBs  generally have higher S\'ersic index values than RPBs. This suggests that CPBs tend to have concentrated nuclei and a spheroidal morphology contrary to the more disc-like RPSBs with lower S\'ersic  index values.
 
 \begin{figure}
     \centering
@@ -24,6 +22,8 @@ The distribution of S\'ersic index values as shown in Figure \ref{fig:Sersic-plo
     \label{fig:Sersic-plot}
 \end{figure}
 
+\textbf{Stellar mass:} The distribution in stellar mass for the CPSBs is compared to that of the RPSBs in Figure \ref{fig:stellar-mass-plot}. Both PSB groups span a similar range in mass. This result was noted previously during the interpretation of the colour-mass diagram depicted in Figure \ref{fig:Colour-Mass-PSBs}.
+
 \begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{images/JupyterPlots/Dist-Stellar-Mass-All.png}
@@ -31,6 +31,7 @@ The distribution of S\'ersic index values as shown in Figure \ref{fig:Sersic-plo
     \label{fig:stellar-mass-plot}
 \end{figure}
 
+\textbf{Redshift:} A comparison of the distribution in redshift for our CPSB and RPSB groups is shown in Figure \ref{fig:redshift-plot}. The redshift range of both groups lies in the range 0.01 \textless z \textless 0.08. The shape of the distribution of both groups is similar. 
 \begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{images/JupyterPlots/Dist-z-All.png}
@@ -38,14 +39,15 @@ The distribution of S\'ersic index values as shown in Figure \ref{fig:Sersic-plo
     \label{fig:redshift-plot}
 \end{figure}
 
+%%%%============================================
+
+
 \begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{images/JupyterPlots/Dist-Delta-PA-All-GoodFlags.png}
-    \caption[Distribution of PSB stellar and gas velocity field position angles]{Distribution of PSB galaxy velocity map position separation angles ($\Delta$PAs) for those PSBs with stellar velocity and gas velocity characteristics flagged as 'good' as denoted in the legend (see text for details). CPSB $\Delta$PA density weights are plotted in red, RPSB $\Delta$PA weights in blue.}
+    \caption[Distribution of PSB stellar and gas velocity field position angles]{Distribution of PSB galaxy velocity field position separation angles ($\Delta$PAs) for those PSBs with stellar velocity and gas velocity characteristics flagged as 'good' as denoted in the legend (see text for details). CPSB $\Delta$PA$_{k}$ density weights are plotted in red, RPSB $\Delta$PA$_{k}$ weights in blue.}
     \label{fig:deltaPAdistribution}
 \end{figure}
-
-The velocity field position angle variance of the CPSB and PSB control galaxies is shown in Figure \ref{fig:controlDeltaPAs}. Both sets of control galaxies have low values of velocity field $\Delta$PAs, i.e. the stellar velocity and gas velocity fields are generally aligned.
 
 \begin{figure}
     \centering
@@ -70,7 +72,7 @@ The velocity field position angle variance of the CPSB and PSB control galaxies 
 
 \subsection{Position angle misalignment}
 \label{PA-misalignment}
-The gas and velocity field position angle misalignment measurements for PSBs where the $\Delta$PA \textgreater 30\textdegree are tabulated in Table \ref{tab:offsetCPSBs} for the CPSBs, and Table \ref{tab:offsetRPSBs} for the RPSBs. Here it can be seen that the number of PSBs galaxies having clearly defined $\Delta$PAs, i.e. \textgreater 30\textdegree, is small fraction of the PSB sample: 5 out of 30 (17\%) CPSBs, and 9 out of 37 (24\%) RPSBs.
+The gas and velocity field position angle misalignment measurements for PSBs where the $\Delta$PA \textgreater 30\textdegree are presented in Table \ref{tab:offsetCPSBs} for the CPSBs, and Table \ref{tab:offsetRPSBs} for the RPSBs. Here it can be seen that the number of PSBs galaxies having clearly defined $\Delta$PAs, i.e. \textgreater 30\textdegree, is small fraction of the PSB sample: 5 out of 30 (17\%) CPSBs, and 9 out of 37 (24\%) RPSBs.
 
 \begin{table}
 \centering
@@ -112,7 +114,7 @@ PlateIFU   & Stellar PA & H$\alpha$ PA & $\Delta$PA \\
 \end{tabular}
 \end{table}
 
-
+The velocity field position angle variance of the CPSB and PSB control galaxies is shown in Figure \ref{fig:controlDeltaPAs}. Both sets of control galaxies have low values of velocity field $\Delta$PAs, i.e. the stellar velocity and gas velocity fields are generally aligned.
 
 \subsection{Kinematic position angle distributions}
 \label{sec:K-S-test}
