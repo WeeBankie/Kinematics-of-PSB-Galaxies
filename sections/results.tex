@@ -1,17 +1,23 @@
 \section{Results and analysis}
 \label{sec:results}
 
-In this section we present the results of the three main topic areas of our investigation:
+In this section we present the results of the three main topic areas of our study of PSB galaxies and their kinematical properties:
 
 \begin{itemize}
-    \item Basic property distributions of PSB galaxies and their controls control groups derived from NSA data
+    \item Basic property distributions
     \item Kinematic position angle analysis
     \item Radon transform profile classification and analysis
 \end{itemize}
 
-\subsection{Basic property distributions of PSBs}
+\subsection{Basic property distributions}
 \label{sec:property-distributions}
-Here we present frequency distributions comparing characteristic properties of CPSBs, RPSBs and their control galaxies. We compare the distributions of CPSBs with that of the RPSB sample in terms of the fundamental properties: stellar mass $M_*$, redshift z, and S\'ersic index. The frequency distribution histograms of these properties are plotted in Figures \ref{fig:stellar-mass-plot}, \ref{fig:redshift-plot} and \ref{fig:Sersic-plot} respectively. The data underlying these property distributions is drawn from the MaNGA \texttt{drpAll} file as listed in Appendix \ref{sec:lists-of-psbs}, Tables \ref{tab:my-CPSBs} and \ref{tab:my-RPSBs}.
+Initially we performed some cursory checks on the distributions of some basic properties of our galaxy samples. Here we present those results as histograms comparing characteristic properties of CPSBs, RPSBs and their control galaxies. We show distributions of CPSB properties alongside those of the RPSB sample in terms of the 3 fundamental properties: 
+\begin{itemize}
+\item stellar mass
+\item redshift
+\item S\'ersic index
+\end{itemize}
+The frequency distribution histograms of these properties are plotted in Figures \ref{fig:stellar-mass-plot}, \ref{fig:redshift-plot} and \ref{fig:Sersic-plot} respectively. The data underlying these property distributions is drawn from the MaNGA \texttt{drpAll} catalogue. The specific property values for each PSB is listed in Appendix \ref{sec:lists-of-psbs}, Tables \ref{tab:my-CPSBs} and \ref{tab:my-RPSBs}.
 
 \textbf{Stellar mass:} The distribution in stellar mass for the CPSBs is compared to that of the RPSBs in Figure \ref{fig:stellar-mass-plot}. Both PSB groups span a similar range in mass. This result was noted previously during the interpretation of the colour-mass diagram depicted in Figure \ref{fig:Colour-Mass-PSBs}.
 
@@ -22,7 +28,7 @@ Here we present frequency distributions comparing characteristic properties of C
     \label{fig:stellar-mass-plot}
 \end{figure}
 
-\textbf{Redshift:} A comparison of the distribution in redshift for our CPSB and RPSB groups is shown in Figure \ref{fig:redshift-plot}. The redshift range of both groups lies in the range 0.01 \textless z \textless 0.08. The shape of the redshift distribution of both groups is similar. We cannot distinguish the CPSB and RPSB populations based on redshift.
+\textbf{Redshift:} A comparison of the distribution in redshift for our CPSB and RPSB groups is shown in Figure \ref{fig:redshift-plot}. The redshift range of both groups lies in the range $0.01 < z < 0.08$. The shape of the redshift distribution of both groups is remarkably similar. We cannot distinguish the CPSB and RPSB populations based on redshift.
 
 \begin{figure}
     \centering
@@ -120,8 +126,8 @@ PlateIFU   & Stellar PA & H$\alpha$ PA & $\Delta$PA \\
 \end{table}
 
 
-% \subsection{Kinematic position angle distributions}
-% \label{sec:K-S-test}
+\subsection{Kinematic position angle distributions}
+\label{sec:K-S-test}
 To investigate the likelihood that the $\Delta$PA$_{k}$s of CPSBs, RPSBs, and their respective control galaxy groups are drawn from the same underlying population we employed a \textbf{Kolmogorov-Smirnov test} (K-S test) analysis. The K-S test is a statistical analysis designed to determine if two samples come from the same underlying distribution, see e.g. \citet{hodges1958significance}. We implement this test using the Python SciPy package \texttt{scipy.stats.kstest} module\footnote{\href{https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ks\_2samp.html}{https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ks\_2samp.html}}.
 
 We ran the two-sided K-S test statistic on the distribution of $\Delta$PA$_{k}$ kinematic position angle analysis described in Section \ref{sec:kinemetry-analysis-method-description}. The results of the K-S test are given in Table \ref{tab:K-S-tests}. The statistical significance inferred from the from the K-S test is that a high value of the test statistic, typically > 0.1, together with a low p-value, < 10$^{-4}$ indicates that the samples are drawn from different statistical distributions. Here we note that the CPSB and RPSB samples originate from different distributions, and also each sample is from a different distribution from its corresponding control galaxy sample. The Python implementation \texttt{scipy.stats.ks\_2samp} accepts samples of different sizes.
