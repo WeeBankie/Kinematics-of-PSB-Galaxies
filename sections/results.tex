@@ -5,22 +5,13 @@ In this section we present the results of the three main topic areas of our inve
 
 \begin{itemize}
     \item Basic property distributions of PSB galaxies and their controls control groups derived from NSA data
-    \item Kinematic position angle distributions
-    \item Radon transform profile classification
+    \item Kinematic position angle analysis
+    \item Radon transform profile classification and analysis
 \end{itemize}
 
 \subsection{Basic property distributions of PSBs}
 \label{sec:property-distributions}
-Here we present frequency distributions comparing characteristic properties of CPSBs, RPSBs and their control galaxies. We compare the distributions of CPSBs with that of the RPSB sample in terms of the fundamental properties: S\'ersic index, stellar mass $M_*$, and redshift z. These distributions are obtained from MaNGA \texttt{drpAll} data as listed in  Appendix \ref{sec:lists-of-psbs}, Tables \ref{tab:my-CPSBs} and \ref{tab:my-RPSBs}. The frequency distribution histograms are plotted in Figures \ref{fig:Sersic-plot}, \ref{fig:stellar-mass-plot} and \ref{fig:redshift-plot} respectively.
-
-\textbf{S\'ersic index (SI):} The surface brightness profile of a galaxy is generally a function of radius from the nucleus. The rate of change of brightness can be described by the S\'ersic function or S\'ersic index (SI). Low values of SI $\sim$1 relate to disc-type galaxies, whereas SI values of 3 or more are measured in galaxies with compact bright nuclei, indicative of more evolved systems. The distribution of S\'ersic index values as shown in Figure \ref{fig:Sersic-plot} covers a wide range of values indicating a wide range of morphologies. CPSBs  generally have higher S\'ersic index values than RPBs. This suggests that CPBs tend to have concentrated nuclei and a spheroidal morphology contrary to the more disc-like RPSBs with lower S\'ersic  index values.
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\columnwidth]{images/JupyterPlots/Dist-Sersic-Index-All.png}
-    \caption[Comparison of the distribution of S\'ersic index values of CPSBs and RPSBs]{Distribution of S\'ersic index (SI) values. The relative number density distribution of the S\'ersic index value for 26 CPSBs (red histogram) and 36 RPSBs (blue) are plotted. Five PSBs with unreliable SI values (SI = 6.000) in the NSA data  have been excluded.}
-    \label{fig:Sersic-plot}
-\end{figure}
+Here we present frequency distributions comparing characteristic properties of CPSBs, RPSBs and their control galaxies. We compare the distributions of CPSBs with that of the RPSB sample in terms of the fundamental properties: stellar mass $M_*$, redshift z, and S\'ersic index. The frequency distribution histograms of these properties are plotted in Figures \ref{fig:stellar-mass-plot}, \ref{fig:redshift-plot} and \ref{fig:Sersic-plot} respectively. The data underlying these property distributions is drawn from the MaNGA \texttt{drpAll} file as listed in Appendix \ref{sec:lists-of-psbs}, Tables \ref{tab:my-CPSBs} and \ref{tab:my-RPSBs}.
 
 \textbf{Stellar mass:} The distribution in stellar mass for the CPSBs is compared to that of the RPSBs in Figure \ref{fig:stellar-mass-plot}. Both PSB groups span a similar range in mass. This result was noted previously during the interpretation of the colour-mass diagram depicted in Figure \ref{fig:Colour-Mass-PSBs}.
 
@@ -31,13 +22,25 @@ Here we present frequency distributions comparing characteristic properties of C
     \label{fig:stellar-mass-plot}
 \end{figure}
 
-\textbf{Redshift:} A comparison of the distribution in redshift for our CPSB and RPSB groups is shown in Figure \ref{fig:redshift-plot}. The redshift range of both groups lies in the range 0.01 \textless z \textless 0.08. The shape of the distribution of both groups is similar. 
+\textbf{Redshift:} A comparison of the distribution in redshift for our CPSB and RPSB groups is shown in Figure \ref{fig:redshift-plot}. The redshift range of both groups lies in the range 0.01 \textless z \textless 0.08. The shape of the redshift distribution of both groups is similar. We cannot distinguish the CPSB and RPSB populations based on redshift.
+
 \begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{images/JupyterPlots/Dist-z-All.png}
     \caption[PSB distribution in redshift]{Distribution in redshift: the redshift z as obtained from the NSA.Z data value for the CPSB sample (shaded in red) is compared to the RPSB sample (blue).}
     \label{fig:redshift-plot}
 \end{figure}
+
+\textbf{S\'ersic index (SI):} The surface brightness profile of a galaxy is generally a function of radius from the nucleus. The rate of change of brightness can be described by the S\'ersic function or S\'ersic index (SI). Low values of SI $\sim$1 relate to disc-type galaxies, whereas SI values of 3 or more are measured in galaxies with compact bright nuclei, indicative of more evolved systems. The distribution of S\'ersic index values as shown in Figure \ref{fig:Sersic-plot} covers a wide range of values indicating a wide range of morphologies. CPSBs  generally have higher S\'ersic index values than RPBs. This suggests that CPBs tend to have concentrated nuclei and a spheroidal morphology contrary to the more disc-like RPSBs with lower S\'ersic index values.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth]{images/JupyterPlots/Dist-Sersic-Index-All.png}
+    \caption[Comparison of the distribution of S\'ersic index values of CPSBs and RPSBs]{Distribution of S\'ersic index (SI) values. The relative number density distribution of the S\'ersic index value for 26 CPSBs (red histogram) and 36 RPSBs (blue) are plotted. Five PSBs with unreliable SI values (SI = 6.000) in the NSA data  have been excluded.}
+    \label{fig:Sersic-plot}
+\end{figure}
+
+In summary, the basic property distributions of CPSBs and RPSBs are very similar for stellar mass and redshift. The distribution of S\'ersic index does however reveal that RPSBs generally have lower SI values implying they are disc-like objects, while CPSBs with higher SI values indicate the morphology of spheroids.
 
 %%%%============================================
 
@@ -70,9 +73,11 @@ Here we present frequency distributions comparing characteristic properties of C
     \label{fig:RPSBvsControlDeltaPAs}
 \end{figure}
 
-\subsection{Position angle misalignment}
+\subsection{Kinematic position angle analysis}
 \label{PA-misalignment}
-The gas and velocity field position angle misalignment measurements for PSBs where the $\Delta$PA \textgreater 30\textdegree are presented in Table \ref{tab:offsetCPSBs} for the CPSBs, and Table \ref{tab:offsetRPSBs} for the RPSBs. Here it can be seen that the number of PSBs galaxies having clearly defined $\Delta$PAs, i.e. \textgreater 30\textdegree, is small fraction of the PSB sample: 5 out of 30 (17\%) CPSBs, and 9 out of 37 (24\%) RPSBs.
+The gas and velocity field position angle misalignment measurements for PSBs where the $\Delta$PA$_{k}$ \textgreater 30\textdegree are presented in Table \ref{tab:offsetCPSBs} for the CPSBs, and Table \ref{tab:offsetRPSBs} for the RPSBs. Here it can be seen that the number of PSBs galaxies having clearly defined $\Delta$PA$_{k}$ i.e. \textgreater 30\textdegree, is small fraction of the PSB sample: 5 out of 30 (17\%) CPSBs, and 9 out of 37 (24\%) RPSBs. 
+
+In contrast, looking at the control galaxies, the velocity field position angle variance of the CPSB and PSB control samples is shown in Figure \ref{fig:controlDeltaPAs}. Both sets of control galaxies have low values of velocity field $\Delta$PA$_{k}$, i.e. the stellar velocity and gas velocity fields are generally closely aligned.
 
 \begin{table}
 \centering
@@ -114,11 +119,10 @@ PlateIFU   & Stellar PA & H$\alpha$ PA & $\Delta$PA \\
 \end{tabular}
 \end{table}
 
-The velocity field position angle variance of the CPSB and PSB control galaxies is shown in Figure \ref{fig:controlDeltaPAs}. Both sets of control galaxies have low values of velocity field $\Delta$PAs, i.e. the stellar velocity and gas velocity fields are generally aligned.
 
-\subsection{Kinematic position angle distributions}
-\label{sec:K-S-test}
-To investigate the likelihood that $\Delta$PAs of CPSBs, RPSBs, and their respective control galaxy groups are drawn from the same underlying population we employed a \textbf{Kolmogorov-Smirnov test} (K-S test) analysis. The K-S test is a statistical analysis designed to determine if two samples come from the same underlying distribution, see e.g. \citet{hodges1958significance}. We implement this test using the Python SciPy package \texttt{scipy.stats.kstest} module\footnote{\href{https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ks\_2samp.html}{https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ks\_2samp.html}}.
+% \subsection{Kinematic position angle distributions}
+% \label{sec:K-S-test}
+To investigate the likelihood that the $\Delta$PA$_{k}$s of CPSBs, RPSBs, and their respective control galaxy groups are drawn from the same underlying population we employed a \textbf{Kolmogorov-Smirnov test} (K-S test) analysis. The K-S test is a statistical analysis designed to determine if two samples come from the same underlying distribution, see e.g. \citet{hodges1958significance}. We implement this test using the Python SciPy package \texttt{scipy.stats.kstest} module\footnote{\href{https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ks\_2samp.html}{https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ks\_2samp.html}}.
 
 We ran the two-sided K-S test statistic on the distribution of $\Delta$PA$_{k}$ kinematic position angle analysis described in Section \ref{sec:kinemetry-analysis-method-description}. The results of the K-S test are given in Table \ref{tab:K-S-tests}. The statistical significance inferred from the from the K-S test is that a high value of the test statistic, typically > 0.1, together with a low p-value, < 10$^{-4}$ indicates that the samples are drawn from different statistical distributions. Here we note that the CPSB and RPSB samples originate from different distributions, and also each sample is from a different distribution from its corresponding control galaxy sample. The Python implementation \texttt{scipy.stats.ks\_2samp} accepts samples of different sizes.
 
