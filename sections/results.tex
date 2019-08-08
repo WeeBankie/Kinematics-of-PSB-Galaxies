@@ -11,13 +11,13 @@ In this section we present the results of the three main topic areas of our stud
 
 \subsection{Basic property distributions}
 \label{sec:property-distributions}
-Initially we performed some cursory checks on the distributions of some basic properties of our galaxy samples. Here we present those results as histograms comparing characteristic properties of CPSBs, RPSBs and their control galaxies. We show distributions of CPSB properties alongside those of the RPSB sample in terms of the 3 fundamental properties: 
+Initially we performed some cursory checks on the distributions of some basic properties of our galaxy samples. Here we present those results as histograms comparing characteristic properties of CPSBs, RPSBs and their control galaxies. We show distributions of CPSB properties alongside those of the RPSB sample in terms of the following 3 fundamental properties: 
 \begin{itemize}
 \item stellar mass
 \item redshift
 \item S\'ersic index
 \end{itemize}
-The frequency distribution histograms of these properties are plotted in Figures \ref{fig:stellar-mass-plot}, \ref{fig:redshift-plot} and \ref{fig:Sersic-plot} respectively. The data underlying these property distributions is drawn from the MaNGA \texttt{drpAll} catalogue. The specific property values for each PSB is listed in Appendix \ref{sec:lists-of-psbs}, Tables \ref{tab:my-CPSBs} and \ref{tab:my-RPSBs}.
+The frequency distribution histograms of these properties are plotted in Figures \ref{fig:stellar-mass-plot}, \ref{fig:redshift-plot} and \ref{fig:Sersic-plot} respectively. The data underlying these  distributions is drawn from the MaNGA \texttt{drpAll} catalogue. The specific property values for each PSB is listed in Appendix \ref{sec:lists-of-psbs}, Tables \ref{tab:my-CPSBs} and \ref{tab:my-RPSBs}.
 
 \textbf{Stellar mass:} The distribution in stellar mass for the CPSBs is compared to that of the RPSBs in Figure \ref{fig:stellar-mass-plot}. Both PSB groups span a similar range in mass. This result was noted previously during the interpretation of the colour-mass diagram depicted in Figure \ref{fig:Colour-Mass-PSBs}.
 
@@ -33,11 +33,11 @@ The frequency distribution histograms of these properties are plotted in Figures
 \begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{images/JupyterPlots/Dist-z-All.png}
-    \caption[PSB distribution in redshift]{Distribution in redshift: the redshift z as obtained from the NSA.Z data value for the CPSB sample (shaded in red) is compared to the RPSB sample (blue).}
+    \caption[PSB distribution in redshift]{Distribution in redshift z as obtained from the NSA.Z data value in the MaNGA \texttt{drpAll} file. The redshift distribution for the CPSB sample (shaded in red) is compared to that of the RPSB sample (blue).}
     \label{fig:redshift-plot}
 \end{figure}
 
-\textbf{S\'ersic index (SI):} The surface brightness profile of a galaxy is generally a function of radius from the nucleus. The rate of change of brightness can be described by the S\'ersic function or S\'ersic index (SI). Low values of SI $\sim$1 relate to disc-type galaxies, whereas SI values of 3 or more are measured in galaxies with compact bright nuclei, indicative of more evolved systems. The distribution of S\'ersic index values as shown in Figure \ref{fig:Sersic-plot} covers a wide range of values indicating a wide range of morphologies. CPSBs  generally have higher S\'ersic index values than RPBs. This suggests that CPBs tend to have concentrated nuclei and a spheroidal morphology contrary to the more disc-like RPSBs with lower S\'ersic index values.
+\textbf{S\'ersic index:} The surface brightness profile of a galaxy is generally a function of radius from the nucleus. The rate of change of brightness can be described by the S\'ersic function or S\'ersic index (SI). Low values of SI $\sim$1 relate to disc-type galaxies, whereas SI values of 3 or more are commonly measured in galaxies with compact bright nuclei indicative of more evolved systems. A wide range of S\'ersic index values is apparent in the distribution, as shown in Figure \ref{fig:Sersic-plot}, implying the presence of disparate morphologies in the sample. We note from the distribution that CPSBs tend to have higher S\'ersic index values than RPBs. This suggests that CPBs have more concentrated nuclei and a spheroidal morphology in contrast to the disc-like RPSBs with lower S\'ersic index values.
 
 \begin{figure}
     \centering
@@ -81,7 +81,7 @@ In summary, the basic property distributions of CPSBs and RPSBs are very similar
 
 \subsection{Kinematic position angle analysis}
 \label{PA-misalignment}
-The gas and velocity field position angle misalignment measurements for PSBs where the $\Delta$PA$_{k}$ \textgreater 30\textdegree are presented in Table \ref{tab:offsetCPSBs} for the CPSBs, and Table \ref{tab:offsetRPSBs} for the RPSBs. Here it can be seen that the number of PSBs galaxies having clearly defined $\Delta$PA$_{k}$ i.e. \textgreater 30\textdegree, is small fraction of the PSB sample: 5 out of 30 (17\%) CPSBs, and 9 out of 37 (24\%) RPSBs. 
+The gas and velocity field position angle misalignment measurements for PSBs where the $\Delta$PA$_{k}$ \textgreater 30\textdegree are presented in Table \ref{tab:offsetCPSBs} for the CPSBs, and Table \ref{tab:offsetRPSBs} for the RPSBs. Here it can be seen that the number of PSBs having clearly defined $\Delta$PA$_{k}$ i.e. \textgreater 30\textdegree, is a small fraction of the PSB sample: 5 out of 30, or 17\% of CPSBs, and 9 out of 37, or 24\% of RPSBs. 
 
 In contrast, looking at the control galaxies, the velocity field position angle variance of the CPSB and PSB control samples is shown in Figure \ref{fig:controlDeltaPAs}. Both sets of control galaxies have low values of velocity field $\Delta$PA$_{k}$, i.e. the stellar velocity and gas velocity fields are generally closely aligned.
 
@@ -126,14 +126,14 @@ PlateIFU   & Stellar PA & H$\alpha$ PA & $\Delta$PA \\
 \end{table}
 
 
-\subsection{Kinematic position angle distributions}
+% \subsection{Kinematic position angle distributions}
 \label{sec:K-S-test}
-To investigate the likelihood that the $\Delta$PA$_{k}$s of CPSBs, RPSBs, and their respective control galaxy groups are drawn from the same underlying population we employed a \textbf{Kolmogorov-Smirnov test} (K-S test) analysis. The K-S test is a statistical analysis designed to determine if two samples come from the same underlying distribution, see e.g. \citet{hodges1958significance}. We implement this test using the Python SciPy package \texttt{scipy.stats.kstest} module\footnote{\href{https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ks\_2samp.html}{https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ks\_2samp.html}}.
+To investigate the likelihood that the diference in kinematic position angles, $\Delta$PA$_{k}$, of CPSBs, RPSBs, and their respective control galaxy groups are drawn from the same underlying population we employed a \textbf{Kolmogorov-Smirnov test} (K-S test) analysis. The K-S test is a statistical analysis designed to determine if two samples come from the same underlying distribution, see e.g. \citet{hodges1958significance}. We implement this test using the Python SciPy package \texttt{scipy.stats.kstest} module\footnote{\href{https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ks\_2samp.html}{https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ks\_2samp.html}}. This Python implementation accepts samples of different size which suits our purpose here.
 
-We ran the two-sided K-S test statistic on the distribution of $\Delta$PA$_{k}$ kinematic position angle analysis described in Section \ref{sec:kinemetry-analysis-method-description}. The results of the K-S test are given in Table \ref{tab:K-S-tests}. The statistical significance inferred from the from the K-S test is that a high value of the test statistic, typically > 0.1, together with a low p-value, < 10$^{-4}$ indicates that the samples are drawn from different statistical distributions. Here we note that the CPSB and RPSB samples originate from different distributions, and also each sample is from a different distribution from its corresponding control galaxy sample. The Python implementation \texttt{scipy.stats.ks\_2samp} accepts samples of different sizes.
+We ran the two-sided K-S test statistic on the distribution of $\Delta$PA$_{k}$ kinematic position angle analysis described in Section \ref{sec:kinemetry-analysis-method-description}. The results of the K-S test are presented in Table \ref{tab:K-S-tests}. The statistical significance inferred from the from the K-S test is that a high value of the test statistic, typically > 0.1, together with a low p-value, < 10$^{-2}$ indicates that the samples are drawn from different statistical distributions. The K-S test results show that  that position angle differences, $\Delta$PA$_{k}$, of the CPSB and RPSB groups show that they originate from different distributions. Also the $\Delta$PA$_{k}$ of each PSB group is from a different distribution than its corresponding control galaxy sample. These results are important in that they reveal statistically significant differences in the kinematic properties of the CPSB group with large $\Delta$PA$_{k}$, the RPSB group with intermediate $\Delta$PA$_{k}$ and the control galaxy groups which exhibit small $\Delta$PA$_{k}$. 
 
 \begin{table}
-\caption[Kolmogorov-Smirnov statistical test of $\Delta$PA distributions]{A Kolmogorov-Smirnov statistical test on various $\Delta$PA sample distributions. A high value of the K-S statistic \textgreater 10\%, together with a low p-value, \textless 10\% indicates that the samples may originate from different statistical distributions.}
+\caption[Kolmogorov-Smirnov statistical test of $\Delta$PA distributions]{Result of a Kolmogorov-Smirnov statistical test performed on $\Delta$PA$_{k}$ distributions from the CPSB, RPSB and control galaxy samples. A high value of the K-S statistic \textgreater 10\%, together with a low p-value, \textless 1\% indicates that the samples originate from different statistical distributions.}
 \label{tab:K-S-tests}
 \begin{tabular}{llcc}
 \hline
@@ -150,7 +150,7 @@ CPSB controls & RPSB controls & 0.197 & 1.3$\times10^{-3}$ \\
 \subsection{Radon profile classification results}
 \label{sec:Radon-profile-classification}
 
-A summary of the final visual classification method is shown in Table \ref{tab:Radon-class-summary}.  A few galaxies could not be visually classified (NC) because of masked areas in the central spaxels of the MaNGA maps, or low S/N regions. These deficiencies prevented the Radon transform code from providing sufficient trace profile data points to enable visual classification. The results of the Radon profile classification process for each of the individual target galaxies is provided in Appendix \ref{sec:visual-classification-tables}, Table \ref{tab:full-visual-classification}. 
+A summary of the results of the visual classification method is presented in Table \ref{tab:Radon-class-summary}.  A few galaxies could not be visually classified (NC) because of masked areas in the central spaxels of the MaNGA stellar velocity maps, or low S/N regions. These deficiencies prevented the Radon transform code from providing sufficient trace profile data points to enable visual classification. The results of the Radon profile classification process for each of the individual target galaxies is provided in Appendix \ref{sec:visual-classification-tables}, Table \ref{tab:full-visual-classification}. 
 
 \begin{table}
     \centering
@@ -170,7 +170,7 @@ A summary of the final visual classification method is shown in Table \ref{tab:R
     \end{tabular}
 \end{table}
 
-On completion of the Radon profile classification we investigated the distribution of the Radon profile types in each of the PSB categories (CPSB and RPSB) and their control samples (CPSB-controls and RPSB-controls). As mentioned earlier the visual classification assessment was performed on the merits of the Radon output plots: the Radon Transform (RT), Radon profile trace and stellar velocity map (see Figure \ref{fig:8442-3704-complete} for an example of this output), without prior knowledge of the PSB group classification. A summary of the Radon profile visual classification assessments grouped by galaxy group category is provided in Table \ref{tab:Radon-VC-results}.
+On completion of the Radon profile classification exercise we investigated the distribution of the Radon profile types in each of the PSB categories (CPSB and RPSB) and their control samples (CPSB-controls and RPSB-controls). As described in Section \ref{sec:Radon-classification} the visual classification assessment was performed on the appearance of the Radon output plots: the Radon Transform (RT), Radon profile trace and stellar velocity map (see Figure \ref{fig:8442-3704-complete} for an example of this output), without prior knowledge of the PSB group category (CPSBs, RPSBs or controls). A summary of the Radon profile visual classification assessments obtained by Classifier A is provided in Table \ref{tab:Radon-VC-results}. These results reveal that galaxies exhibiting Radon transform profile bend features: Type-IB, Type-OB and Type-IB+OB, are more prevalent in CPSBs (16 out of 27, or 59\% of galaxies classified) than in RPSBs (15 out of 36, or 42\% of those classified). A similar trend is found in the control groups. Bend-type features are found in 18 out of 29, or 62\% of CPSB controls, while 11 out of 31, or 35\% of RPSB controls display bend-type features. These results are portrayed graphically as a grouped bar graph in Figure \ref{fig:Radon-grouped-barchart}.
 
 \begin{table*}
 \caption[Radon profile visual classification CPSB and RPSB samples and their control galaxies - classifier A]{Results of the Radon profile visual classification assessments for CPSB and RPSB samples and their control galaxies obtained from classifier A. PSBs and controls were assigned a Radon profile according to the appearance of the shape of the Radon profile trace plot. Where clear features were evident the galaxy was assigned a Radon profile Type as described in the text. Galaxies that could not be objectively classified due to poor data were flagged as 'not classified' (NC). The percentage of each Type of those classified in the group shown in parentheses.}
@@ -190,12 +190,10 @@ Totals & 123 & \multicolumn{1}{l}{37 (30\%)} & 22 (18\%) & 19 (15\%) & 19 (15\%)
 \end{tabular}
 \end{table*}
 
-The results of the visual classification exercise from classifier A are summarised in Table \ref{tab:Radon-VC-results}. By inspection of the sums of column values, these results reveal that galaxies exhibiting Radon transform profile bend features, Type-IB, Type-OB and Type-IB+OB, are clearly more prevalent in CPSBs (16 out of 27, or 59\% of galaxies classified) than in RPSBs (15 out of 36, or 42\% of those classified). A similar trend is found in the control groups: CPSB controls exhibit 18 out of 29, or 62\% with bend features, while RPSB controls have 11 out of 31, or 35\% with bend features. These results are portrayed graphically in as a grouped bar graph in Figure \ref{fig:Radon-grouped-barchart}.
-
 \begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{images/JupyterPlots/PROFILE-GROUPS-CLASSIFIER-A.png}
-    \caption[Radon profile Type classifications determined by classifier A]{The results of the Radon profile visual classification exercise obtained by classifier A is shown for the 4 galaxy groups of interest: CPSBs, CPSB controls, RPSBs and their controls. The numerical frequency of each of the 5 Radon profile type features from Table \ref{tab:Radon-VC-results} presented graphically in this grouped bar plot. The colour coding of each type feature is shown in the legend.}
+    \caption[Radon profile Type classifications determined by classifier A]{The results of the Radon profile visual classification exercise obtained by classifier A is shown for the 4 galaxy groups of interest: CPSBs, CPSB controls, RPSBs and their controls. The numerical frequency of each of the 5 Radon profile type features from Table \ref{tab:Radon-VC-results} are displayed in this grouped bar plot. The colour coding of each type feature is shown in the legend.}
     \label{fig:Radon-grouped-barchart}
 \end{figure}
 
@@ -243,7 +241,7 @@ It is noted the majority of PSBs with $\Delta$PA offsets \textgreater 30\textdeg
 
 \subsection{Independent visual classification}
 \label{independent-classification}
-A second Radon profile classification exercise was carried out independently by a second classifier, classifier B, following the same procedure described earlier. The results of this supplementary classification are summarised in Table \ref{tab:Radon-VC2-results}, and displayed graphically in Figure \ref{fig:Radon-grouped-barchart-B}. 
+An independent Radon profile classification exercise was carried out by a second classifier, Classifier B, following the same procedure as described in Section \ref{sec:Radon-classification}. The results of this supplementary classification are summarised in Table \ref{tab:Radon-VC2-results}, and displayed graphically in Figure \ref{fig:Radon-grouped-barchart-B}. The results obtained by Classifier B can be compared with and contrasted to the results obtained by Classifier A, as presented earlier in Table \ref{tab:Radon-VC-results} and Figure \ref{fig:Radon-grouped-barchart}.
 
 \begin{table*}
 \caption[Radon profile visual classification CPSB and RPSB samples and their control galaxies - classifier B]{Results of the supplementary Radon profile visual classification assessments for CPSB and RPSB samples and their control galaxies. The information presented is as per Table  \ref{tab:Radon-VC-results} but provides the profile classification results visually assessed by independent classifier B.}
@@ -267,14 +265,14 @@ Totals & 127 & \multicolumn{1}{l}{ 4 (3\%)} & 17 (13\%) & 17 (13\%) & 22 (17\%) 
 \begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{images/JupyterPlots/PROFILE-TYPES-CLASSIFIER-B.png}
-    \caption[Radon profile Type classifications determined by classifier B]{The results of the Radon profile visual classification exercise obtained by classifier B is shown for the 4 galaxy groups of interest: CPSBs, CPSB controls, RPSBs and their controls. The numerical frequency of each of the 5 Radon profile type features from Table \ref{tab:Radon-VC2-results} are presented graphically in this grouped bar plot. The colour coding of each type feature is shown in the legend.}
+    \caption[Radon profile Type classifications determined by Classifier B]{The results of the Radon profile visual classification exercise obtained by Classifier B is shown for the 4 galaxy groups of interest: CPSBs, CPSB controls, RPSBs and their controls. The numerical frequency of each of the 5 Radon profile type features from Table \ref{tab:Radon-VC2-results} are presented graphically in this grouped bar plot. The colour coding of each type feature is shown in the legend.}
     \label{fig:Radon-grouped-barchart-B}
 \end{figure}
 
-Comparing the Radon profile visual classification results in Table \ref{tab:Radon-VC-results} and Table \ref{tab:Radon-VC2-results} we see significant disparity between classifiers A and B particularly in the categorisation Type-C, constant, and Type-A, asymmetric profiles. This may be due to the similarity of the examples given in Figure 5 of \cite{2018MNRAS.480.2217S}. Both the example profiles display some measure of asymmetry and also show a relatively constant profile in their central regions, around $\rho=0$. In fact there is some indication of inner bend features in both the Type-C and Type-A examples. So visual classification is difficult, and this conclusion was noted by both classifiers. We continue further discussion on this point in Section \ref{sec:discussion}. Setting aside the difficulties of Type-A and Type-C classifications, we note that similar numbers galaxies with with bend-type features, Type-OB, Type-IB and Type-OB+IB were identified by both classifiers. We emphasise, however, that there was still considerable variation in classification for specific individual galaxies. The results of the two independent classifications for the 3 bend-feature categories, in each of the 4 galaxy groups, is summarised in Table \ref{tab:Radon-VC3-results}.
+We note a significant disparity in the the numbers classified in each of the Type categories as determined by Classifiers A and B. The disparity is particularly noticeable for the categorisation of Type-C (constant) and Type-A (asymmetric) profiles. This imbalance may be due to the similarity of the guideline examples given in Figure 7 of \cite{2018MNRAS.480.2217S}. Both the example profiles display some measure of asymmetry and also show a relatively constant profile in their central regions, around radius $\rho = 0$. In fact there is some indication of inner bend features in both the Type-C and Type-A examples. Evidently visual classification is difficult, and this comment was made by both classifiers. We continue further discussion on this point in Section \ref{sec:discussion}. Setting aside the difficulties of Type-A and Type-C classifications, we note that similar numbers galaxies with with bend-type features, Type-OB, Type-IB and Type-OB+IB were identified by both classifiers. We emphasise, however, that there was still considerable variation in classification for specific individual galaxies. The results of the two independent classifications (Classifiers A and B) for the 3 bend-feature categories, in each of the 4 galaxy groups, are summarised in Table \ref{tab:Radon-VC3-results}. There is little to infer from these results, maybe only that both classifiers determined similar numbers of Types in each galaxy category. This similarity is strongly contradicted, however, by the classifications determined by Classifiers A and B for specific galaxies. This can be seen by comparing the Type classification listings of Tables \ref{tab:full-visual-classification} and \ref{tab:visual-classification-B} in Appendix \ref{sec:visual-classification-tables}.
 
 \begin{table*}
-\caption[Comparison of Radon profile classifications by classifiers A and B, excluding Types A and B]{Comparison of Radon profile Type classifications provided by classifiers A and B, excluding Type-C and Type-A profiles.}
+\caption[Comparison of Radon profile classifications by classifiers A and B, excluding Types A and B]{Comparison of Radon profile Type classifications provided by Classifiers A and B, excluding Type-C and Type-A profiles.}
 \label{tab:Radon-VC3-results}
 \begin{tabular}{lccccccccc}
 \hline
@@ -290,6 +288,4 @@ Totals & 22 & 19 & 19 & 17 & 17 & 22 \\
 \hline
 \end{tabular}
 \end{table*}
-
-Table \ref{tab:Radon-VC3-results} provides a summary of the Radon profile type classification results of two classifiers working independently, and without prior knowledge of the four galaxy groupings. There is little to infer from these results, maybe only that both classifiers determined similar number of Types in each galaxy category. This similarity is strongly contradicted by the classification determined by classifiers A and B for specific galaxies as can be seen in the Type classification listings of Tables \ref{tab:full-visual-classification} and \ref{tab:visual-classification-B} in Appendix \ref{sec:visual-classification-tables}.
 
