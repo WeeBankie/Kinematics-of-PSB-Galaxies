@@ -15,14 +15,16 @@ In this study we have utilised MaNGA datacubes released in DR15 MPL-7 which have
     \item 8322-1901
 \end{itemize}
 
-and secondly, examples of poor resolution/definition in stellar velocity maps (i.e. having a blotchy appearance, due to spatial binning of low S/N spaxels), and some with masked spaxels:
+and secondly, examples of poor resolution/definition in stellar velocity maps, i.e. having a blotchy appearance, due to spatial binning of low S/N spaxels, or with masked spaxels:
 
 \begin{itemize}
     \item 9088-12703
     \item 8993-6104
 \end{itemize}
 
-The stellar velocity maps and their Radon transform and trace profiles for these examples are shown in Figure \ref{fig:binning-comparison}. The differences being the binning models, Voronoi binning and SPX binning, of the input stellar velocity maps. 
+The stellar velocity maps together with their Radon transform and trace profiles for these well defined example 7977-12704 are shown in Figure \ref{fig:binning-comparison}. The differences being the binning models of the input stellar velocity maps: Voronoi binning in the left-hand panel and SPX binning on the right. A comparison shows that there is little difference in the Radon transform and Radon profile plots. It is also apparent that the Radon transform algorithm for the SPX velocity maps yields a greater number of valid data points in the trace plot. We conclude that both VOR10 and SPX binned maps would lead to the same Type classification in these cases. This conclusion was also obtained for other galaxy showing good resolution in the stellar velocity map,  8322-1901 (figure not included). 
+
+However, the same conclusion does not apply for the low resolution stellar velocity map examples, 8993-6104 shown in Figure \ref{fig:binning-comparison2} and 9088-12703 (figure not included). In these cases there are marked differences in the extent of spatial coverage and shapes of the velocity field PA, the Radon transform minimum and the Radon profile. In particular the control galaxy 8993-6104 displays a clearly asymmetric Radon profile with VOR10 binning, but could possibly be interpreted as an outer bend in the Radon profile trace of the SPX map. Although these differences can be expected due to the exclusion of low S/N low spaxels in the SPX maps, crucially this can easily lead to a different visual classification result between the transforms of Voronoi binned and SPX velocity field maps. 
 
 \begin{figure*}
     \centering
@@ -40,4 +42,4 @@ The stellar velocity maps and their Radon transform and trace profiles for these
     \label{fig:binning-comparison2}
 \end{figure*}
 
-A comparison shows that for the velocity maps with good resolution, e.g. 7977-12704 as shown in Figure \ref{fig:binning-comparison},  there is little difference in the Radon transform and Radon profile plots. It is also apparent that the Radon transform algorithm for the SPX velocity maps yields a greater number of valid data points in the trace plot. We conclude that both VOR10 and SPX binned maps would lead to the same Type classification in these cases. This conclusion was also obtained for galaxy 8322-1901 (figure not included).  However, the same does not hold for the low resolution stellar velocity map examples, 8993-6104 shown in Figure \ref{fig:binning-comparison2} and 9088-12703 (figure not included). In these cases there are marked differences in the extent of spatial coverage and shapes of the velocity field PA, the Radon transform minimum and the Radon profile. In particular the control galaxy 8993-6104 displays a clearly asymmetric Radon profile with VOR10 binning, but could possibly be interpreted as an outer bend in the Radon profile trace of the SPX map. Although these differences can be expected due to the exclusion of low S/N low spaxels in the SPX maps, crucially this can easily lead to a different visual classification result between the transforms of Voronoi binned and SPX velocity field maps. 
+
