@@ -2,24 +2,24 @@
 \label{sec:methods-I-kinemetry}
 
 % \subsection{Kinematic position angle analysis}
-Kinematic position angle PA$_{k}$  analysis involves the determination of the orientation of the major axes of gas and stellar velocity fields. One application of the method is to distinguish disc dominated systems from those systems displaying a complex morphology. Discs generally have co-rotational velocity fields and well aligned position angles, while merged systems may contain distinct kinematic components, until the components coalesce dynamically. Merged systems can exhibit misaligned position angles of their gas and stellar velocity fields. The difference in the global position angles of the major axes of stellar and gas velocity field yields the quantity $\Delta$PA$_{k}$, with units of degrees.
+Kinematic position angle (PA$_{k}$) analysis involves the determination of the orientation of the major axes of gas and stellar velocity fields. One application of the method is to distinguish disc dominated systems from those systems displaying a complex morphology. Discs generally have co-rotational velocity fields and well aligned position angles, while merged systems may contain distinct kinematic components until they coalesce dynamically. The gas and stellar velocity fields of merged systems can exhibit misaligned kinematic position angles. The difference in the global position angles of the major axes of stellar and gas velocity field yields the quantity $\Delta$PA$_{k}$, with units of degrees.
 
 %\subsection{Kinematic PA analysis procedure}
-% \label{sec:kinemetry-analysis-method-description}
+\label{sec:kinemetry-analysis-method-description}
 % \subsection{Quality screening}
-Global kinematic velocity position angles (PA$_{k}$) for the PSB and control galaxy samples were determined using the \texttt{fit\_kinemetry\_pa} IDL routine as described in appendix C of \cite{2006MNRAS.366..787K}. The code returns the angle of the line bisecting the greatest change in a stellar or gas velocity field between the receding and approaching sides. The \texttt{fit\_kinemetry\_pa} IDL code and a Python 3 package \texttt{PaFit} are available via Cappellari's website\footnote{\href{http://www-astro.physics.ox.ac.uk/~mxc/software/\#pafit}{http://www-astro.physics.ox.ac.uk/~mxc/software/\#pafit}}. We downloaded the \texttt{PaFit} package and successfully tested this code fitting kinematic position angles to the model velocity fields provided. 
+Global kinematic velocity position angles (PA$_{k}$) can be calculated using the \texttt{fit\_kinemetry\_pa} IDL routine as described in appendix C of \cite{2006MNRAS.366..787K}. The code returns the angle of the line bisecting the greatest change in a stellar or gas velocity field between the receding and approaching sides. The \texttt{fit\_kinemetry\_pa} IDL code and a Python 3 package \texttt{PaFit} are available via Cappellari's website\footnote{\href{http://www-astro.physics.ox.ac.uk/~mxc/software/\#pafit}{http://www-astro.physics.ox.ac.uk/~mxc/software/\#pafit}}. We downloaded the \texttt{PaFit} package and successfully tested this code by fitting kinematic position angles to the model velocity fields supplied. 
 
-\cite{2019MNRAS.483..172D} performed a kinematic position angle analysis on over 8,000 galaxies from the MaNGA Product Launch MPL-8 internal data release. In order to obtain a clean sample of well defined global PAs they visually classified the stellar and H$\alpha$ gas velocity fields of all galaxies in their sample into 3 categories (Chris Duckworth, 2019, personal communication), and set flags in their dataset as follows:
+\cite{2019MNRAS.483..172D} performed a kinematic position angle analysis on over 8,000 galaxies from the MaNGA Product Launch MPL-8 internal data release. In order to obtain a clean sample of well defined global PA$_{k}$s they visually classified the stellar and H$\alpha$ gas velocity fields of all galaxies in their sample into 3 categories (Chris Duckworth, 2019, personal communication), and set flags in their dataset as follows:
 
 \begin{itemize}
-    \item {Flag 1}  Dominant coherent rotation and well defined PA
+    \item {Flag 1}  Dominant coherent rotation and well defined PA$_{k}$
     \item {Flag 2}  Dominant coherent rotation but with complex motions or highly inclined velocity fields 
     \item {Flag 3}  Do not use
 \end{itemize}
 
-The resulting MPL-8 screened dataset of galaxies with reliable global PAs (flagged as [1] or [2]) from \cite{2019MNRAS.483..172D} was matched with the PSB galaxies in the sample of Chen et al. (2019, submitted.) to obtain a subset of PSBs with good velocity field analysis analysis flags.
+The resulting MPL-8 screened dataset of galaxies with reliable global PA$_{k}$ (flagged as [1] or [2]) from \cite{2019MNRAS.483..172D} was matched by MaNGA plateifu ID to the PSB galaxies in the sample of Chen et al. (2019, submitted.) to obtain a subset of PSBs with good velocity field classification flags.
 
-Examples of misaligned stellar and gas velocity fields for a CPSB and an RPSB is shown in Figure \ref{fig:CPSB-8313-6101-PA}. In classical kinematic position angle analysis it is considered significant if the gas and stellar velocity field offset position angle $\Delta$PA$_{k}$ is greater than 30\textdegree. This can be an indication of past disruption of the galaxy possibly the result of major mergers.
+Examples of misaligned stellar and gas velocity fields for a CPSB and an RPSB is shown in Figure \ref{fig:CPSB-8313-6101-PA}. In classical kinematic position angle analysis it is considered significant if the gas and stellar velocity field offset position angle $\Delta$PA$_{k}$ is greater than 30\textdegree. A large $\Delta$PA$_{k}$ offset may indicate past disruption of a galaxy, possibly caused by a major merger.
 
 \begin{figure*}
     \centering
