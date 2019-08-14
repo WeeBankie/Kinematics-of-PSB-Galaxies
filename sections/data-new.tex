@@ -5,11 +5,11 @@ For this work we utilise a sample of 68 revealing post-starburst spectral featur
 
 \subsection{The SDSS-IV MaNGA survey}
 \label{sec:MaNGA}
-The data used in this work includes galaxy stellar velocity and gas velocity kinematic maps, spectral index maps and individual spectra drawn from the SDSS-IV MaNGA project. An overview of the MaNGA project is provided by \citet{2015ApJ...798....7B}. This paper describes key instrumentation features and outlines the observational strategy: MaNGA captures dithered observations with 17 fibre-bundle integral
+The data used in this work includes galaxy stellar velocity and gas velocity kinematic maps, spectral index maps and individual spectra drawn from the SDSS-IV MaNGA project. An overview of the MaNGA project is provided in \citet{2015ApJ...798....7B} which contains a description of the key instrumentation features and outline of the observational strategy. MaNGA captures dithered observations with 17 fibre-bundle integral
 field units (IFUs) varying in size from 19 fibres to 127 fibres and arranged in 3 to 7 hexagonal layers. Two dual-channel spectrographs provide
 simultaneous wavelength coverage over the range 3600 to 10300 \AA\ at a spectral resolution of R$\sim$2000. MaNGA is an integral field spectroscopic survey (IFS) which provides spatially resolved images and maps of galaxy properties. The images and property maps can provide evidence of external kinematic influences such as close neighbour interaction, present merger activity and the signatures of past merger remnants.
 
-IFU dithered data are processed in the MaNGA Data Reduction Pipeline (DRP) to produce calibrated spectra and rectified three-dimensional data cubes. The final data products (data cubes) of the DRP feed into the MaNGA data analysis pipeline (DAP) \citep{2016AJ....152...83L,2019arXiv190100856W} which, the purposes of this paper, provides:
+IFU dithered data are processed in the MaNGA Data Reduction Pipeline (DRP) to produce calibrated spectra and rectified three-dimensional data cubes. The final data products (data cubes) of the DRP feed into the MaNGA data analysis pipeline (DAP) \citep{2016AJ....152...83L,2019arXiv190100856W} which, for the purposes of this paper, provides:
 \begin{itemize}
     \item Spatially stacked spectra
     \item Stellar kinematics (velocity, V, and velocity dispersion, $\sigma$)
@@ -62,9 +62,9 @@ rsic index from two-dimensional, single-component Sersic fit in r-band\\
 \end{table*}
 
 \subsection{Sample selection}
-As noted in the introduction, post-starburst galaxies and regions of galaxies with PSB features can be identified from their spectra which typically exhibit the strong Balmer absorption lines of A-type stars. Additionally, weak or absent H$\alpha$ and/or [OII] emission lines indicate a quiescent state with little or no present star formation. 
+As noted in the introduction, post-starburst galaxies and regions of galaxies with PSB features can be identified from their spectra which typically exhibit the strong Balmer absorption lines of A-type stars. Additionally, weak or absent H$\alpha$ and/or [OII] emission lines indicate a quiescent state with little or no on-going star formation. 
 
-The PSB and control galaxy samples provided by Chen et al. (2019, submitted, personal communication) were drawn from an analysis of 4633 galaxies made available from the earlier MPL-6\footnote{\href{}{https://sdss-marvin.readthedocs.io/en/stable/datamodel/mpl6.html}} (MaNGA Product Launch 6). The objective being to identify galaxies possessing PSB regions in which star formation was rapidly quenched in the past 1 to 2 Gyr leaving no spectral evidence of stars younger than A-type.  Chen et al. (2019, submitted) adopted the following sample selection criteria:
+The PSB and control galaxy samples were provided by Chen et al. (2019, submitted), personal communication. These samples were drawn from an analysis of 4633 galaxies from data release  MPL-6\footnote{\href{}{https://sdss-marvin.readthedocs.io/en/stable/datamodel/mpl6.html}} (MaNGA Product Launch 6). The objective being to identify galaxies possessing PSB regions in which star formation was rapidly quenched in the past 1 to 2 Gyr leaving no spectral evidence of stars earlier than A-type.  Chen et al. (2019, submitted) adopted the following sample selection criteria:
 \begin{itemize}
     \item Spaxels with signal-to-noise S/N > 10 per pixel
     \item Strong H$\delta_A$ absorption line > 3\AA 
@@ -74,22 +74,22 @@ The PSB and control galaxy samples provided by Chen et al. (2019, submitted, per
 \end{itemize}
 The H$\delta_A$ absorption spectral index is the equivalent width of H$\delta$ 4102\AA\ line as described by \citet{1994ApJS...94..687W}. In addition to the above criteria, for a region of a galaxy to be classed as post-starburst at least 6 contiguous spaxels from the DAP analysis are required. 
 
-Chen et al. (2019, submitted) identified a total of 360 galaxies possessing PSB spaxel regions meeting the above selection criteria and categorised them into 3 PSB types: those with central PSB regions (CPSBs); those with off-centre ring-like, or partial ring-like PSB features (RPSBs) and those with irregular regions of PSB spaxels in the outskirts (irregular PSBs or IPSBs). The PSB selection from Chen et al. (2019) yielded a total of 31 CPSBs and 37 RPSBs. Useful properties from the MaNGA \texttt{drpAll} file for the selected PSBs are listed in appendix \ref{sec:lists-of-psbs}, Tables \ref{tab:my-CPSBs} and \ref{tab:my-RPSBs} respectively. We will use the data in these tables frequently throughout this report to investigate the distribution of various parameters between the PSB groups and their control samples.
+Chen et al. (2019, submitted) identified a total of 360 galaxies possessing PSB spaxel regions meeting the above selection criteria and categorised them into 3 PSB types: those with central PSB regions (CPSBs); those with off-centre ring-like, or partial ring-like PSB features (RPSBs) and those with irregular regions of PSB spaxels in the outskirts (irregular PSBs or IPSBs). This PSB selection yielded a total of 31 CPSBs and 37 RPSBs. The MaNGA plateifu ID for each of the selected PSBs, together with some useful properties from the MaNGA \texttt{drpAll} file, are listed in Appendix \ref{sec:lists-of-psbs}, Table \ref{tab:my-CPSBs} for the CPSBs, and Table \ref{tab:my-RPSBs} for the RPSBs. We will use the data in these tables frequently throughout this report to investigate the distribution of various parameters between the PSB groups and their control samples.
 
-The colour-mass distribution of the CPSB and RPSB samples is shown in Figure \ref{fig:Colour-Mass-PSBs}. The contour plot represents the complete population of MaNGA DR15 galaxies plotted as the NSA (NASA Sloan atlas) colour index NUV-i values versus galaxy stellar mass obtained from the NSA data field  NSA\_ELPETRO\_LOGMASS. Our PSB samples are superimposed on the DR15 full population density contour plot. We note that the population of CPSBs generally lie redward of the RPSBs as shown in the colour-mass diagram of Figure \ref{fig:Colour-Mass-PSBs}. The mass distributions of the two PSB populations are similar, however.
+The colour-mass distribution of the CPSB and RPSB samples is shown in Figure \ref{fig:Colour-Mass-PSBs}. The contour plot represents the complete population of MaNGA DR15 galaxies plotted as the NASA Sloan atlas (NSA) colour index NUV-i values versus galaxy stellar mass obtained from the NSA data field  NSA\_ELPETRO\_LOGMASS. Our PSB samples are superimposed on the DR15 full population density contour plot. We note that the population of CPSBs generally lie redward of the RPSBs. The mass distributions of the two PSB populations are similar, however.
 
 \begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{images/CMDs/CMD-CPSB+RPSB-15.png}
-    \caption[Colour-mass distribution of PSBs]{The sample of PSB galaxies is shown distributed over the complete DR15 population density contour plot as shown in Figure \ref{fig:CMD-mass-1}. CPSBs are represented by red dots and RPSBs as blue dots.}
+    \caption[Colour-mass distribution of PSBs]{The sample of PSB galaxies is shown distributed over the complete DR15 population density contour plot as was shown in Figure \ref{fig:CMD-mass-1}. CPSBs are represented by red dots and RPSBs by blue dots.}
     \label{fig:Colour-Mass-PSBs}
 \end{figure}
 
 \subsection{Control galaxies}
 \label{sec:controls}
-A control sample set of regular galaxies not exhibiting PSB features was also selected by Chen et al. (2019). The purpose of the control sample is to provide a reference set of properties for comparison with the PSB data with a view to identifying typical progenitors which have not (yet) experienced a major merger. For each PSB group (CPSBs and RPSBs), a set of 10 non-PSB galaxies were selected but having similar stellar mass and global D$_n$4000 spectral indices. We have used this control galaxy sample in this work to highlight the differences of the properties of PSBs compared to regular (non-PSB) galaxies.
+A control sample set of regular galaxies, i.e. not exhibiting PSB features, was also selected by Chen et al. (2019). The purpose of the control sample is to provide a reference set of properties for comparison with the PSB data with a view to identifying typical progenitors which have not (yet) experienced a major merger. For each CPSB and RPSBs, a set of 10 non-PSB galaxies were selected. The control sets having similar ranges in stellar mass and global D$_n$4000 spectral indices to the PSBs. We used the control galaxy sets to compare the differences in properties of PSBs to those of regular (non-PSB) galaxies.
 
-Colour-mass diagrams of the two PSB groups with subsets of their control group samples are presented in Figure \ref{fig:Colour-Mass-PSBs-controls}. The colour-mass distribution of each of the PSB groups, CPSBs and RPSBs, is generally similar to that of their respective control groups. This confirms that the general objectives of control selection was achieved.
+Colour-mass diagrams of the two PSB groups with subsets of their control group samples are presented in Figure \ref{fig:Colour-Mass-PSBs-controls}. The colour-mass distribution of each of the PSB groups, CPSBs and RPSBs, is generally similar to that of their respective control groups.
 
 \begin{figure*}
     \centering
@@ -116,7 +116,7 @@ The central spaxel spectrum of the CPSB galaxy 8623-9102 is shown in Figure \ref
 \end{figure*}
 
 
-The spectrum obtained from the central spaxel of a ring-type RPSB galaxy is shown in Figure \ref{fig:RPSB-8323-6103-spec}. The central spectrum (spaxel coordinates [27,27]) shows strong H$\alpha$ emission consistent with the presence of an ample gas supply for continuing star formation. However, moving away from the central spaxel, in the direction towards the upper right of the IFU hexagonal frame, the spectrum at spaxel coordinates [34,32] exhibits the characteristics of a post-starburst region. The spectrum in this region reveals weak emission lines and strong Balmer absorption lines typical of the stellar atmospheres of A-type stars. These features are consistent with the presence of a ring-type PSB feature at this location.
+The spectrum obtained from the central spaxel of a ring-type RPSB galaxy is shown in Figure \ref{fig:RPSB-8323-6103-spec}. The central spectrum, at spaxel coordinates [27,27], shows strong H$\alpha$ emission consistent with a region of on-going star formation. However, moving away from the central spaxel, in the direction towards the upper right of the IFU hexagonal frame, the spectrum at spaxel coordinates [34,32] exhibits the characteristics of a post-starburst region. The spectrum in this region reveals weak emission lines and strong Balmer absorption lines typical of the stellar atmospheres of A-type stars. These features are consistent with the presence of a ring-type PSB feature at this location.
 
 \begin{figure*}
     \centering
@@ -127,7 +127,7 @@ The spectrum obtained from the central spaxel of a ring-type RPSB galaxy is show
     \includegraphics[width=0.35\textwidth]{images/Spectra/RPSB-8323-6103-34-32.png}
     \caption[Image and central and offset spectra of the RPSB 8323-6103]{The SDSS gri image, central and offset spectra of the RPSB 8323-6103. Left: SDSS 3-colour image. 
     Centre: the spectrum of the central region of the ring-type PSB 8323-6103 at spaxel coordinates [27, 27] revealing strong H$\alpha$ emission. 
-    Right: the spectrum of ring-type PSB 8323-6103 at offset spaxel coordinates [34, 32].  The spectra of spaxels in this region exhibit typical post-starburst features of weak emission lines and strong Balmer absorption lines. This location is above and to the right of centre, as indicated in the left panel gri image by the white circle.}
+    Right: the spectrum of ring-type PSB 8323-6103 at offset spaxel coordinates [34, 32]. The spectra of spaxels in this region exhibit typical post-starburst features of weak emission lines and strong Balmer absorption lines. The location of the PSB feature is indicated by the white circle inside IFU hexagon shown in the gri image.}
     \label{fig:RPSB-8323-6103-spec}
 \end{figure*}
 
